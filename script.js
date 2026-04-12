@@ -119,4 +119,199 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // ---- Chat Widget: Hudson the Goose ----
+  const chatWidget = document.getElementById('chatWidget');
+  const chatLauncher = document.getElementById('chatLauncher');
+  const chatPanel = document.getElementById('chatPanel');
+  const chatClose = document.getElementById('chatClose');
+  const chatMessages = document.getElementById('chatMessages');
+  const chatQuickReplies = document.getElementById('chatQuickReplies');
+
+  // Goose avatar SVG (reused for bot message bubbles)
+  const gooseAvatarSVG = `
+    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M14 40C14 32 22 28 32 28C44 28 52 32 54 38C56 44 50 48 38 48C22 48 14 46 14 40Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+      <path d="M14 38L8 34M14 40L6 40M14 42L8 46" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M44 28C44 18 48 12 52 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="52" cy="10" r="4" stroke="currentColor" stroke-width="2.5"/>
+      <path d="M56 10L60 11L56 12" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <circle cx="53" cy="9" r="0.9" fill="currentColor"/>
+      <path d="M28 36C32 32 40 32 46 36" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+      <path d="M28 48L28 56M38 48L38 56" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M25 56L31 56M35 56L41 56" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+  `;
+
+  // FAQ knowledge base — keyed quick replies and their responses
+  const chatFAQ = {
+    services: {
+      label: 'What services do you offer?',
+      reply: `We're a full-service contractor — general contracting and carpentry, roof replacements, interior and exterior painting, deck staining, wood and surface waterproofing, seasonal property care (pressure washing, gutter and snow), security camera installation (Ring, Nest, Arlo, Blink), and AI and smart-tech help. Want details on any one?`,
+      next: ['painting', 'roofing', 'security', 'concierge', 'estimate']
+    },
+    painting: {
+      label: 'Painting',
+      reply: `Premium interior and exterior painting with expert color consultation. Built to handle Teton Valley's UV and freeze-thaw. Want a free estimate?`,
+      next: ['estimate', 'area', 'services']
+    },
+    roofing: {
+      label: 'Roofing',
+      reply: `Full roof replacements built for heavy snow loads and mountain weather. Fully insured, licensed, and warranty-backed. Want me to set up a free estimate?`,
+      next: ['estimate', 'area', 'services']
+    },
+    security: {
+      label: 'Security cameras',
+      reply: `We install, sync, and troubleshoot Ring, Nest, Arlo, and Blink systems — including ongoing support if you're not into the tech side.`,
+      next: ['estimate', 'services']
+    },
+    concierge: {
+      label: 'Concierge service',
+      reply: `Need something outside our core trades? We've built a vetted network of Teton Valley pros — hot tub maintenance, house cleaning, landscaping, builders, realtors, property management. One call connects you to the right person.`,
+      next: ['contact', 'services']
+    },
+    area: {
+      label: 'Where do you work?',
+      reply: `Teton Valley, Idaho and surrounding areas — Driggs, Victor, Tetonia, and nearby. If you're not sure, just ask!`,
+      next: ['estimate', 'services']
+    },
+    pricing: {
+      label: 'How much does it cost?',
+      reply: `Every project is different, so we give free, honest estimates after we understand the scope. No pressure, no hidden fees. Want to set one up?`,
+      next: ['estimate', 'contact']
+    },
+    estimate: {
+      label: 'Get a free estimate',
+      reply: `Easy — fill out the contact form below or reach us directly:<br><a href="mailto:hudsontetondev@gmail.com">hudsontetondev@gmail.com</a><br><a href="tel:+12086718686">(208) 671-8686</a>`,
+      next: ['services', 'area'],
+      action: 'scrollToContact'
+    },
+    contact: {
+      label: 'Contact info',
+      reply: `Reach us anytime:<br>Email: <a href="mailto:hudsontetondev@gmail.com">hudsontetondev@gmail.com</a><br>Phone: <a href="tel:+12086718686">(208) 671-8686</a><br>Instagram: <a href="https://www.instagram.com/hudsontetondev" target="_blank" rel="noopener">@hudsontetondev</a>`,
+      next: ['estimate', 'services']
+    },
+    insured: {
+      label: 'Are you insured?',
+      reply: `Yes — fully licensed and insured in Idaho. We can share documentation on request.`,
+      next: ['estimate', 'services']
+    }
+  };
+
+  // Default starting quick replies
+  const defaultQuickReplies = ['services', 'estimate', 'area', 'pricing', 'insured'];
+
+  let chatStarted = false;
+
+  function appendMessage(text, sender) {
+    const msg = document.createElement('div');
+    msg.className = `chat-message ${sender}`;
+
+    if (sender === 'bot') {
+      const avatar = document.createElement('div');
+      avatar.className = 'chat-msg-avatar';
+      avatar.innerHTML = gooseAvatarSVG;
+      msg.appendChild(avatar);
+    }
+
+    const bubble = document.createElement('div');
+    bubble.className = 'chat-msg-bubble';
+    bubble.innerHTML = text;
+    msg.appendChild(bubble);
+
+    chatMessages.appendChild(msg);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+    return msg;
+  }
+
+  function showTyping() {
+    const msg = document.createElement('div');
+    msg.className = 'chat-message bot chat-typing';
+    msg.innerHTML = `
+      <div class="chat-msg-avatar">${gooseAvatarSVG}</div>
+      <div class="chat-msg-bubble">
+        <span class="chat-typing-dot"></span>
+        <span class="chat-typing-dot"></span>
+        <span class="chat-typing-dot"></span>
+      </div>
+    `;
+    chatMessages.appendChild(msg);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+    return msg;
+  }
+
+  function renderQuickReplies(keys) {
+    chatQuickReplies.innerHTML = '';
+    keys.forEach(key => {
+      const item = chatFAQ[key];
+      if (!item) return;
+      const btn = document.createElement('button');
+      btn.className = 'chat-quick-reply';
+      btn.textContent = item.label;
+      btn.addEventListener('click', () => handleQuickReply(key));
+      chatQuickReplies.appendChild(btn);
+    });
+  }
+
+  function handleQuickReply(key) {
+    const item = chatFAQ[key];
+    if (!item) return;
+
+    appendMessage(item.label, 'user');
+    chatQuickReplies.innerHTML = '';
+
+    const typing = showTyping();
+    setTimeout(() => {
+      typing.remove();
+      appendMessage(item.reply, 'bot');
+      renderQuickReplies(item.next || defaultQuickReplies);
+
+      if (item.action === 'scrollToContact') {
+        setTimeout(() => {
+          const contact = document.getElementById('contact');
+          if (contact) {
+            const top = contact.getBoundingClientRect().top + window.pageYOffset - 80;
+            window.scrollTo({ top, behavior: 'smooth' });
+          }
+        }, 600);
+      }
+    }, 650);
+  }
+
+  function startChatIfNeeded() {
+    if (chatStarted) return;
+    chatStarted = true;
+    setTimeout(() => {
+      appendMessage(`Hi, I'm <strong>Hudson</strong> — the goose around here. I can answer quick questions about our services, service area, or how to get a free estimate. What can I help with?`, 'bot');
+      renderQuickReplies(defaultQuickReplies);
+    }, 250);
+  }
+
+  function openChat() {
+    chatWidget.classList.add('open');
+    chatPanel.setAttribute('aria-hidden', 'false');
+    startChatIfNeeded();
+  }
+
+  function closeChat() {
+    chatWidget.classList.remove('open');
+    chatPanel.setAttribute('aria-hidden', 'true');
+  }
+
+  chatLauncher.addEventListener('click', () => {
+    if (chatWidget.classList.contains('open')) {
+      closeChat();
+    } else {
+      openChat();
+    }
+  });
+
+  chatClose.addEventListener('click', closeChat);
+
+  // Close on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && chatWidget.classList.contains('open')) {
+      closeChat();
+    }
+  });
+
 });
