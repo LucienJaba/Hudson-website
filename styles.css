@@ -282,44 +282,53 @@ h1, h2, h3, h4 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--navy-dark);
   overflow: hidden;
+  background:
+    radial-gradient(ellipse at 50% 0%, #122B52 0%, #0B1D3A 40%, #060F1F 100%);
 }
 
+/* Subtle starfield + atmospheric haze on top of the night sky */
 .hero::before {
   content: '';
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(135deg, var(--navy-dark) 0%, transparent 50%),
-    linear-gradient(215deg, rgba(201,168,76,0.08) 0%, transparent 50%);
+    radial-gradient(ellipse 1200px 400px at 75% 15%, rgba(201, 168, 76, 0.10), transparent 70%),
+    radial-gradient(ellipse 1000px 300px at 25% 25%, rgba(122, 158, 220, 0.08), transparent 70%);
   z-index: 1;
+  pointer-events: none;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 70% 30%, rgba(201,168,76,0.06) 0%, transparent 60%),
-    radial-gradient(ellipse at 20% 80%, rgba(18,43,82,0.4) 0%, transparent 60%);
-  z-index: 1;
+    radial-gradient(ellipse at 50% 100%, rgba(6, 15, 31, 0.7), transparent 60%);
+  z-index: 3;
+  pointer-events: none;
 }
 
-/* Mountain silhouette decoration */
-.hero::after {
-  content: '';
+/* Mountain landscape sits behind the text but in front of the sky */
+.hero-mountains {
   position: absolute;
-  bottom: 0;
   left: 0;
   right: 0;
-  height: 200px;
-  background: linear-gradient(to top, var(--navy-dark), transparent);
-  z-index: 1;
+  bottom: 0;
+  width: 100%;
+  height: 70%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hero-mountains svg {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 .hero-content {
   position: relative;
-  z-index: 2;
+  z-index: 4;
   text-align: center;
   padding: 120px 24px 80px;
 }
@@ -353,7 +362,7 @@ h1, h2, h3, h4 {
   bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 2;
+  z-index: 4;
 }
 
 .scroll-arrow {
