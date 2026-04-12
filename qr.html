@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Code &mdash; Hudson Development LLC</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0B1D3A;
+      --navy-dark: #060F1F;
+      --gold: #C9A84C;
+      --gold-light: #D4B96A;
+      --off-white: #F5F5F0;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: radial-gradient(ellipse at 50% 0%, #122B52 0%, #0B1D3A 50%, #060F1F 100%);
+      color: var(--off-white);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+    .qr-card {
+      background: var(--off-white);
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+      text-align: center;
+      max-width: 480px;
+      width: 100%;
+    }
+    .brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--navy);
+      letter-spacing: 0.12em;
+    }
+    .tagline {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      color: var(--gold);
+      font-size: 0.95rem;
+      margin-top: 4px;
+    }
+    .qr-target {
+      margin: 28px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      display: inline-block;
+      border: 3px solid var(--gold);
+    }
+    .qr-target canvas, .qr-target svg { display: block; }
+    .url {
+      font-size: 0.9rem;
+      color: var(--navy);
+      word-break: break-all;
+      margin-bottom: 24px;
+    }
+    .url a { color: var(--navy); text-decoration: none; border-bottom: 1px solid var(--gold); }
+    .actions {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn {
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      color: var(--navy-dark);
+      border: none;
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: transform 0.2s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .footer-note {
+      margin-top: 28px;
+      font-size: 0.8rem;
+      color: rgba(245, 245, 240, 0.7);
+      text-align: center;
+      max-width: 480px;
+    }
+    .back {
+      margin-top: 16px;
+      font-size: 0.85rem;
+      color: var(--gold);
+      text-decoration: none;
+    }
+    .back:hover { color: var(--gold-light); }
+  </style>
+</head>
+<body>
+  <div class="qr-card">
+    <div class="brand">HUDSON</div>
+    <div class="tagline">"The Goose is Loose"</div>
+    <div class="qr-target" id="qrTarget"></div>
+    <p class="url"><a href="https://hudsontetondev.com/" target="_blank" rel="noopener">hudsontetondev.com</a></p>
+    <div class="actions">
+      <button class="btn" id="downloadPng">Download PNG</button>
+      <button class="btn" id="downloadSvg">Download SVG</button>
+      <button class="btn" id="printBtn">Print</button>
+    </div>
+  </div>
+  <p class="footer-note">Use this QR code on truck wraps, business cards, or yard signs. Scans straight to <strong>hudsontetondev.com</strong>.</p>
+  <a class="back" href="/">&larr; Back to homepage</a>
+
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+  <script>
+    const URL_TO_ENCODE = 'https://hudsontetondev.com/';
+    const target = document.getElementById('qrTarget');
+
+    // Render PNG canvas (high-res for printing)
+    const canvas = document.createElement('canvas');
+    target.appendChild(canvas);
+    QRCode.toCanvas(canvas, URL_TO_ENCODE, {
+      width: 320,
+      margin: 1,
+      color: { dark: '#0B1D3A', light: '#FFFFFF' },
+      errorCorrectionLevel: 'H'
+    });
+
+    document.getElementById('downloadPng').addEventListener('click', () => {
+      const link = document.createElement('a');
+      link.download = 'hudson-qr.png';
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+    });
+
+    document.getElementById('downloadSvg').addEventListener('click', () => {
+      QRCode.toString(URL_TO_ENCODE, {
+        type: 'svg',
+        margin: 1,
+        color: { dark: '#0B1D3A', light: '#FFFFFF' },
+        errorCorrectionLevel: 'H'
+      }, (err, svg) => {
+        if (err) return;
+        const blob = new Blob([svg], { type: 'image/svg+xml' });
+        const link = document.createElement('a');
+        link.download = 'hudson-qr.svg';
+        link.href = URL.createObjectURL(blob);
+        link.click();
+      });
+    });
+
+    document.getElementById('printBtn').addEventListener('click', () => window.print());
+  </script>
+</body>
+</html>
