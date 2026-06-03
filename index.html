@@ -3,13 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hudson Development LLC — Teton Valley & Jackson Hole Contractor</title>
-  <meta name="description" content="Full-service home improvement, roofing, storm restoration, and property management serving Teton Valley, Idaho and Jackson, Wyoming. 12+ years experience. Fully insured.">
-  <meta name="keywords" content="contractor Teton Valley, Driggs contractor, Victor Idaho contractor, Jackson Wyoming contractor, roofing, hail damage repair, storm restoration, painting, deck staining, property management, vacation rental management">
+  <!-- Progressive enhancement: hide-on-scroll reveals only when JS is active. ?still freezes them for screenshots. -->
+  <script>(function(){var d=document.documentElement;d.classList.add('js');if(location.search.indexOf('still')>-1)d.classList.add('still');})();</script>
+  <title>Hudson Development LLC — Teton Valley & Jackson Hole Contractor + Web/AI</title>
+  <meta name="description" content="Fourth-generation builder serving Teton Valley, Idaho and Jackson, Wyoming. Home improvement, painting, roofing, storm restoration, and property management — plus websites, AI, and automation for local businesses. 12+ years experience. Fully insured.">
+  <meta name="keywords" content="contractor Teton Valley, Driggs contractor, Victor Idaho contractor, Jackson Wyoming contractor, painting, roofing, hail damage repair, storm restoration, deck staining, property management, small business websites Teton Valley, AI automation local business">
   <meta name="author" content="Hudson Development LLC">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://hudsontetondev.com/">
   <meta name="theme-color" content="#0B1D3A">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicon.svg">
 
   <!-- Geo tags for local SEO -->
   <meta name="geo.region" content="US-ID">
@@ -19,15 +23,15 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Hudson Development LLC">
-  <meta property="og:title" content="Hudson Development LLC — Teton Valley & Jackson Hole Contractor">
-  <meta property="og:description" content="Full-service home improvement, roofing, storm restoration, and property management for Teton Valley, ID and Jackson, WY. 12+ years experience. Fully insured.">
+  <meta property="og:title" content="Hudson Development LLC — Teton Valley & Jackson Hole Contractor + Web/AI">
+  <meta property="og:description" content="Fourth-generation builder. Home improvement, painting, roofing, and property management for Teton Valley, ID and Jackson, WY — plus websites, AI, and automation for local businesses. Fully insured.">
   <meta property="og:url" content="https://hudsontetondev.com/">
   <meta property="og:locale" content="en_US">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Hudson Development LLC — Teton Valley & Jackson Hole Contractor">
-  <meta name="twitter:description" content="Roofing, storm restoration, painting, and property management for Teton Valley, ID and Jackson, WY. 12+ years experience. Fully insured.">
+  <meta name="twitter:title" content="Hudson Development LLC — Teton Valley & Jackson Hole">
+  <meta name="twitter:description" content="Fourth-generation builder. Trades + websites, AI, and automation for Teton Valley, ID and Jackson, WY. 12+ years experience. Fully insured.">
 
   <!-- JSON-LD structured data -->
   <script type="application/ld+json">
@@ -40,7 +44,7 @@
     "email": "hudsontetondev@gmail.com",
     "priceRange": "$$",
     "slogan": "The Goose is Loose",
-    "description": "Full-service home improvement, roofing, storm restoration, and property management for Teton Valley, ID and Jackson, WY. 12+ years experience. Fully insured.",
+    "description": "Fourth-generation builder offering home improvement, painting, roofing, storm restoration, and property management for Teton Valley, ID and Jackson, WY — plus websites, AI, and automation for local businesses. 12+ years experience. Fully insured.",
     "address": {
       "@type": "PostalAddress",
       "addressRegion": "ID",
@@ -64,7 +68,8 @@
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Wood & Surface Waterproofing" } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Seasonal Property Care" } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Security System Installation" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Property Management" } }
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Property Management" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Websites, AI & Automation for Local Business" } }
       ]
     },
     "sameAs": [
@@ -75,52 +80,47 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+  <!-- Grain overlay for tactile depth -->
+  <div class="grain" aria-hidden="true"></div>
+
   <!-- Navigation -->
   <nav class="navbar" id="navbar">
     <div class="container nav-container">
-      <a href="#" class="nav-logo">
-        <div class="logo-icon">
+      <a href="#hero" class="nav-logo" aria-label="Hudson Development LLC home">
+        <span class="logo-icon">
           <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Hudson goose mark">
-            <!-- Body -->
             <path d="M14 40C14 32 22 28 32 28C44 28 52 32 54 38C56 44 50 48 38 48C22 48 14 46 14 40Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
-            <!-- Tail feathers -->
             <path d="M14 38L8 34M14 40L6 40M14 42L8 46" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            <!-- Neck -->
             <path d="M44 28C44 18 48 12 52 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-            <!-- Head -->
             <circle cx="52" cy="10" r="4" stroke="currentColor" stroke-width="2.5"/>
-            <!-- Beak -->
             <path d="M56 10L60 11L56 12" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-            <!-- Eye -->
             <circle cx="53" cy="9" r="0.9" fill="currentColor"/>
-            <!-- Wing -->
             <path d="M28 36C32 32 40 32 46 36" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-            <!-- Legs -->
             <path d="M28 48L28 56M38 48L38 56" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            <!-- Webbed feet -->
             <path d="M25 56L31 56M35 56L41 56" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
           </svg>
-        </div>
-        <div class="logo-text">
+        </span>
+        <span class="logo-text">
           <span class="logo-hudson">HUDSON</span>
-          <span class="logo-dev">DEVELOPMENT LLC</span>
-          <span class="logo-tagline">"The Goose is Loose"</span>
-        </div>
+          <span class="logo-dev">DEVELOPMENT&nbsp;LLC</span>
+        </span>
       </a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
       </button>
       <ul class="nav-links" id="navLinks">
         <li><a href="#services">Services</a></li>
-        <li><a href="#concierge">Property Mgmt</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#work">Our&nbsp;Work</a></li>
+        <li><a href="#digital">Web&nbsp;&amp;&nbsp;AI</a></li>
+        <li><a href="#concierge">Property&nbsp;Mgmt</a></li>
+        <li><a href="#story">The&nbsp;Story</a></li>
         <li><a href="#contact" class="nav-cta">Free Estimate</a></li>
       </ul>
     </div>
@@ -128,31 +128,81 @@
 
   <!-- Hero Section -->
   <header class="hero" id="hero">
-    <div class="hero-overlay"></div>
-
-    <!-- Mountain photograph (placeholder - replace with licensed Grand Teton photo before launch) -->
-    <div class="hero-photo" aria-hidden="true"></div>
+    <!-- Layered atmospheric backdrop: navy sky + topographic contour landscape -->
+    <div class="hero-sky" aria-hidden="true"></div>
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="hero-topo" aria-hidden="true">
+      <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+        <g class="topo-lines" fill="none" stroke="currentColor" stroke-width="1.2">
+          <path class="topo-line" d="M-20 720 Q 360 600 720 660 T 1460 600"/>
+          <path class="topo-line" d="M-20 760 Q 360 650 720 700 T 1460 650"/>
+          <path class="topo-line" d="M-20 800 Q 380 700 720 740 T 1460 700"/>
+          <path class="topo-line" d="M-20 660 Q 340 540 720 600 T 1460 540"/>
+          <path class="topo-line" d="M-20 600 Q 320 470 720 540 T 1460 470"/>
+          <path class="topo-line" d="M-20 540 Q 300 410 720 480 T 1460 410"/>
+          <path class="topo-line" d="M-20 480 Q 300 360 720 430 T 1460 360"/>
+          <path class="topo-line" d="M-20 840 Q 400 760 720 790 T 1460 760"/>
+        </g>
+        <!-- Teton ridge silhouette -->
+        <path class="topo-ridge" d="M-20 900 L -20 640 L 180 540 L 320 600 L 470 430 L 560 500 L 690 300 L 760 380 L 880 250 L 980 360 L 1120 470 L 1260 410 L 1460 520 L 1460 900 Z" fill="currentColor"/>
+      </svg>
+    </div>
 
     <div class="container hero-content">
-      <p class="hero-tagline fade-up">TETON VALLEY &amp; JACKSON HOLE CONTRACTOR</p>
-      <h1 class="hero-title fade-up delay-1">Built for the<br><span class="gold">Mountains.</span><br>Built to <span class="gold">Last.</span></h1>
-      <p class="hero-subtitle fade-up delay-2">Full-service home improvement and construction backed by <strong>12+ years of experience</strong>. Built for homeowners who expect the best. Fully insured.</p>
-      <a href="#contact" class="btn btn-primary fade-up delay-3">Get a Free Estimate</a>
+      <p class="hero-eyebrow reveal-load" data-delay="0">
+        <span class="hero-eyebrow-line"></span>
+        FOURTH-GENERATION BUILDER · TETON VALLEY &amp; JACKSON HOLE
+      </p>
+      <h1 class="hero-title reveal-load" data-delay="1">Built for the<br><em>Mountains.</em><br>Built to <span class="gold">Last.</span></h1>
+      <p class="hero-subtitle reveal-load" data-delay="2">Home improvement and craftsmanship backed by <strong>12+ years</strong> and four generations of builders &mdash; now bringing modern <strong>websites, AI, and automation</strong> to the valley's businesses too. Fully insured.</p>
+      <div class="hero-actions reveal-load" data-delay="3">
+        <a href="#contact" class="btn btn-primary magnetic">Get a Free Estimate</a>
+        <a href="#services" class="btn btn-ghost">See What We Do</a>
+      </div>
+      <p class="hero-tag reveal-load" data-delay="4"><span class="goose-quote">&ldquo;The Goose is Loose.&rdquo;</span></p>
     </div>
-    <div class="hero-scroll-indicator">
-      <div class="scroll-arrow"></div>
+
+    <div class="hero-scroll-indicator" aria-hidden="true">
+      <span class="scroll-word">Scroll</span>
+      <span class="scroll-arrow"></span>
     </div>
   </header>
+
+  <!-- Trust / Stats Band -->
+  <section class="trustband" aria-label="At a glance">
+    <div class="container trustband-grid">
+      <div class="trust-stat reveal">
+        <span class="trust-num"><span class="count" data-target="4" data-suffix="th">4th</span></span>
+        <span class="trust-label">Generation Builder</span>
+      </div>
+      <div class="trust-stat reveal">
+        <span class="trust-num"><span class="count" data-target="12" data-suffix="+">12+</span></span>
+        <span class="trust-label">Years Experience</span>
+      </div>
+      <div class="trust-stat reveal">
+        <span class="trust-num">Fully</span>
+        <span class="trust-label">Licensed &amp; Insured</span>
+      </div>
+      <div class="trust-stat reveal">
+        <span class="trust-num">24<span class="trust-unit">hr</span></span>
+        <span class="trust-label">Response on Estimates</span>
+      </div>
+    </div>
+  </section>
 
   <!-- Services Section -->
   <section class="services" id="services">
     <div class="container">
-      <p class="section-label reveal">WHAT WE DO</p>
-      <h2 class="section-title reveal">Our Services</h2>
-      <p class="section-subtitle reveal">From routine maintenance to major renovations, we deliver craftsmanship that stands up to Teton Valley's demanding climate.</p>
+      <div class="section-head reveal">
+        <p class="section-label">HOME &amp; IMPROVEMENT</p>
+        <h2 class="section-title">Craftsmanship that<br>survives the <span class="gold">seasons.</span></h2>
+        <p class="section-subtitle">From routine upkeep to major renovations, every job is built to stand up to Teton Valley's UV, snow load, and freeze-thaw. Done right the first time.</p>
+      </div>
+
       <div class="services-grid">
 
-        <div class="service-card reveal">
+        <article class="service-card reveal">
+          <div class="service-num">01</div>
           <div class="service-icon">
             <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M8 40V20L24 8L40 20V40H28V28H20V40H8Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
@@ -160,11 +210,12 @@
               <path d="M36 36H32V32H36V36Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
             </svg>
           </div>
-          <h3>General Contracting & Carpentry</h3>
+          <h3>General Contracting &amp; Carpentry</h3>
           <p>Complete project management and expert carpentry for renovations, additions, and custom builds.</p>
-        </div>
+        </article>
 
-        <div class="service-card reveal">
+        <article class="service-card reveal">
+          <div class="service-num">02</div>
           <div class="service-icon">
             <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect x="6" y="14" width="36" height="28" rx="2" stroke="currentColor" stroke-width="2.5"/>
@@ -175,10 +226,11 @@
             </svg>
           </div>
           <h3>Roofing &amp; Storm Restoration</h3>
-          <p>Full roof replacements built for heavy snow loads. <strong>Hail and wind damage specialists</strong> &mdash; we handle insurance claims end-to-end and get your home buttoned up fast.</p>
-        </div>
+          <p>Roof replacements built for heavy snow loads. <strong>Hail and wind damage specialists</strong> &mdash; we handle insurance claims end-to-end and get your home buttoned up fast.</p>
+        </article>
 
-        <div class="service-card reveal">
+        <article class="service-card reveal">
+          <div class="service-num">03</div>
           <div class="service-icon">
             <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M12 40V16C12 14 13 12 16 12H32C35 12 36 14 36 16V40" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
@@ -189,11 +241,12 @@
               <path d="M18 34H22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
             </svg>
           </div>
-          <h3>Interior & Exterior Painting</h3>
-          <p>Premium finishes and expert color consultation for interiors, exteriors, and everything in between.</p>
-        </div>
+          <h3>Interior &amp; Exterior Painting</h3>
+          <p>A decade-plus of painting expertise &mdash; premium finishes and expert color consultation, inside and out.</p>
+        </article>
 
-        <div class="service-card reveal">
+        <article class="service-card reveal">
+          <div class="service-num">04</div>
           <div class="service-icon">
             <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M6 36H42V40H6V36Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
@@ -207,9 +260,10 @@
           </div>
           <h3>Deck Staining</h3>
           <p>Restore and protect your deck with professional staining that resists UV, moisture, and harsh winters.</p>
-        </div>
+        </article>
 
-        <div class="service-card reveal">
+        <article class="service-card reveal">
+          <div class="service-num">05</div>
           <div class="service-icon">
             <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M24 6C24 6 18 14 18 22C18 26 20 30 24 32C28 30 30 26 30 22C30 14 24 6 24 6Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
@@ -219,11 +273,12 @@
               <path d="M34 22C36 24 38 28 36 32" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
             </svg>
           </div>
-          <h3>Wood & Surface Waterproofing</h3>
+          <h3>Wood &amp; Surface Waterproofing</h3>
           <p>Protect your investment from moisture damage with professional-grade waterproofing treatments.</p>
-        </div>
+        </article>
 
-        <div class="service-card reveal">
+        <article class="service-card reveal">
+          <div class="service-num">06</div>
           <div class="service-icon">
             <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M24 8L20 16H12L18 22L16 30L24 26L32 30L30 22L36 16H28L24 8Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
@@ -232,10 +287,11 @@
             </svg>
           </div>
           <h3>Seasonal Property Care</h3>
-          <p>Snow removal, ice dam management, gutter cleaning, pressure washing, and seasonal fall/spring prep &mdash; keeping your property dialed in year-round.</p>
-        </div>
+          <p>Snow removal, ice dam management, gutter cleaning, pressure washing, and fall/spring prep &mdash; dialed in year-round.</p>
+        </article>
 
-        <div class="service-card reveal">
+        <article class="service-card reveal">
+          <div class="service-num">07</div>
           <div class="service-icon">
             <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect x="14" y="8" width="20" height="32" rx="3" stroke="currentColor" stroke-width="2.5"/>
@@ -249,10 +305,11 @@
             </svg>
           </div>
           <h3>Security System Installation</h3>
-          <p>Installation, service, and troubleshooting for Ring, Nest, Arlo, and Blink camera systems — including syncing, setup, and ongoing support.</p>
-        </div>
+          <p>Install, sync, and troubleshoot Ring, Nest, Arlo, and Blink camera systems &mdash; with ongoing support.</p>
+        </article>
 
-        <div class="service-card reveal">
+        <article class="service-card reveal service-card--link">
+          <div class="service-num">08</div>
           <div class="service-icon">
             <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect x="8" y="12" width="32" height="24" rx="3" stroke="currentColor" stroke-width="2.5"/>
@@ -262,53 +319,121 @@
               <path d="M14 44H34" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
             </svg>
           </div>
-          <h3>AI & Smart Tech Solutions</h3>
-          <p>Adopt AI tools, optimize your personal workflow, and get hands-on help with home security tech, entertainment systems, work productivity, and travel planning.</p>
-        </div>
+          <h3>AI &amp; Smart-Tech Help</h3>
+          <p>Smart-home setup, AI tools, and productivity workflows for your home and life. <a href="#digital" class="inline-link">More on our digital work &rarr;</a></p>
+        </article>
 
       </div>
     </div>
   </section>
 
-  <!-- Property Management Section (anchor stays #concierge for existing links) -->
+  <!-- Our Work Gallery -->
+  <section class="work" id="work">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="section-label">OUR WORK</p>
+        <h2 class="section-title">Proof in every<br><span class="gold">brushstroke.</span></h2>
+        <p class="section-subtitle">A sample of recent jobs &mdash; exteriors, decks, roofing, and carpentry. Twelve-plus years of it. Tap any photo to enlarge.</p>
+      </div>
+      <div class="work-grid reveal">
+        <button class="work-tile" type="button"><img src="images/ext-timber.jpg" alt="Exterior staining on a timber-sided mountain home" loading="lazy"><span class="work-tag">Exterior Finish</span></button>
+        <button class="work-tile" type="button"><img src="images/roof-crew.jpg" alt="Crew tearing off and reframing a roof" loading="lazy"><span class="work-tag">Roofing &amp; Reframe</span></button>
+        <button class="work-tile" type="button"><img src="images/deck-hottub.jpg" alt="Restored and re-stained deck with hot tub" loading="lazy"><span class="work-tag">Deck Restoration</span></button>
+        <button class="work-tile" type="button"><img src="images/ext-historic.jpg" alt="Repainted historic Victorian home" loading="lazy"><span class="work-tag">Historic Repaint</span></button>
+        <button class="work-tile" type="button"><img src="images/carp-framing.jpg" alt="New deck framing and joists" loading="lazy"><span class="work-tag">Carpentry &amp; Framing</span></button>
+        <button class="work-tile" type="button"><img src="images/paint-spray.jpg" alt="Spraying a fresh exterior finish" loading="lazy"><span class="work-tag">Spray Finishing</span></button>
+        <button class="work-tile" type="button"><img src="images/ext-cabin.jpg" alt="Freshly repainted log cabin exterior" loading="lazy"><span class="work-tag">Cabin Repaint</span></button>
+        <button class="work-tile" type="button"><img src="images/deck-refinish.jpg" alt="Refinished wood deck" loading="lazy"><span class="work-tag">Deck Refinishing</span></button>
+        <button class="work-tile" type="button"><img src="images/roof-wash.jpg" alt="Soft-washing a shingle roof" loading="lazy"><span class="work-tag">Roof Soft-Wash</span></button>
+        <button class="work-tile" type="button"><img src="images/ext-finished.jpg" alt="Completed exterior repaint" loading="lazy"><span class="work-tag">Exterior Repaint</span></button>
+        <button class="work-tile" type="button"><img src="images/carp-restoration.jpg" alt="Structural carpentry and restoration" loading="lazy"><span class="work-tag">Structural Carpentry</span></button>
+        <button class="work-tile" type="button"><img src="images/ext-repaint.jpg" alt="Full exterior repaint, black with white trim" loading="lazy"><span class="work-tag">Full Repaint</span></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Web, AI & Automation Section -->
+  <section class="digital" id="digital">
+    <div class="digital-topo" aria-hidden="true">
+      <svg viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" stroke="currentColor" stroke-width="1">
+          <path d="M-20 300 Q 360 220 720 280 T 1460 220"/>
+          <path d="M-20 360 Q 360 280 720 340 T 1460 280"/>
+          <path d="M-20 420 Q 360 340 720 400 T 1460 340"/>
+          <path d="M-20 240 Q 360 160 720 220 T 1460 160"/>
+        </g>
+      </svg>
+    </div>
+    <div class="container">
+      <div class="digital-wrap">
+        <div class="digital-text reveal">
+          <p class="section-label gold-on-dark">WEBSITES · AI · AUTOMATION</p>
+          <h2 class="section-title light">The valley's businesses,<br><span class="gold">built for what's next.</span></h2>
+          <p class="digital-lead">Same builder, different toolset. We design fast, modern websites and put AI and automation to work for local businesses &mdash; so you can spend less time on busywork and more time on the work that matters.</p>
+          <ul class="digital-list">
+            <li>
+              <span class="digital-li-icon">
+                <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="14" rx="2" stroke="currentColor" stroke-width="2"/><path d="M3 8H21" stroke="currentColor" stroke-width="2"/><path d="M9 21H15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              </span>
+              <div>
+                <strong>Websites &amp; Online Presence</strong>
+                <span>Fast, mobile-first sites that turn visitors into booked jobs. Plus Google Business, reviews, and local SEO.</span>
+              </div>
+            </li>
+            <li>
+              <span class="digital-li-icon">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M12 3L13.8 8.2L19 10L13.8 11.8L12 17L10.2 11.8L5 10L10.2 8.2L12 3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="18.5" cy="17.5" r="2" stroke="currentColor" stroke-width="1.6"/></svg>
+              </span>
+              <div>
+                <strong>AI Assistants &amp; Agents</strong>
+                <span>Chatbots and AI agents that answer customers, capture leads, and book work 24/7 &mdash; like the goose on this page.</span>
+              </div>
+            </li>
+            <li>
+              <span class="digital-li-icon">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M5 7H15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="18" cy="7" r="2.4" stroke="currentColor" stroke-width="1.8"/><path d="M19 17H9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="6" cy="17" r="2.4" stroke="currentColor" stroke-width="1.8"/></svg>
+              </span>
+              <div>
+                <strong>Automation &amp; Workflows</strong>
+                <span>Connect your tools so scheduling, invoicing, follow-ups, and reminders run themselves.</span>
+              </div>
+            </li>
+          </ul>
+          <a href="#contact" class="btn btn-primary magnetic">Modernize My Business</a>
+        </div>
+
+        <div class="digital-visual reveal delay-1" aria-hidden="true">
+          <div class="terminal-card">
+            <div class="terminal-bar">
+              <span class="term-dot"></span><span class="term-dot"></span><span class="term-dot"></span>
+              <span class="term-title">hudson-automation</span>
+            </div>
+            <div class="terminal-body">
+              <p class="term-line"><span class="term-prompt">&rsaquo;</span> new lead detected <span class="term-ok">✓</span></p>
+              <p class="term-line"><span class="term-prompt">&rsaquo;</span> text customer back <span class="term-ok">✓</span></p>
+              <p class="term-line"><span class="term-prompt">&rsaquo;</span> add to calendar <span class="term-ok">✓</span></p>
+              <p class="term-line"><span class="term-prompt">&rsaquo;</span> send estimate <span class="term-typing">▍</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Property Management Section -->
   <section class="concierge" id="concierge">
     <div class="container">
       <div class="concierge-wrapper">
         <div class="concierge-text reveal">
-          <p class="section-label">FOR HOMEOWNERS &amp; INVESTORS</p>
-          <h2 class="section-title">Full-Service<br>Property <span class="gold">Management</span></h2>
+          <p class="section-label gold-on-dark">FOR HOMEOWNERS &amp; INVESTORS</p>
+          <h2 class="section-title light">Full-Service<br>Property <span class="gold">Management</span></h2>
           <p class="concierge-description">Vacation homes, second homes, and long-term rentals &mdash; we handle the full lifecycle. Guest turnover, vendor coordination, emergency response, seasonal maintenance, and a single point of contact you can actually reach. Especially valuable for absentee owners in Driggs, Victor, Tetonia, and Jackson.</p>
           <ul class="concierge-list">
-            <li>
-              <span class="check-icon">
-                <svg viewBox="0 0 24 24" fill="none"><path d="M5 12L10 17L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </span>
-              Vacation Home Care
-            </li>
-            <li>
-              <span class="check-icon">
-                <svg viewBox="0 0 24 24" fill="none"><path d="M5 12L10 17L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </span>
-              Guest Turnover &amp; Cleaning
-            </li>
-            <li>
-              <span class="check-icon">
-                <svg viewBox="0 0 24 24" fill="none"><path d="M5 12L10 17L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </span>
-              Vendor Coordination
-            </li>
-            <li>
-              <span class="check-icon">
-                <svg viewBox="0 0 24 24" fill="none"><path d="M5 12L10 17L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </span>
-              Emergency Response
-            </li>
-            <li>
-              <span class="check-icon">
-                <svg viewBox="0 0 24 24" fill="none"><path d="M5 12L10 17L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </span>
-              Seasonal Maintenance
-            </li>
+            <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12L10 17L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Vacation Home Care</li>
+            <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12L10 17L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Guest Turnover &amp; Cleaning</li>
+            <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12L10 17L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Vendor Coordination</li>
+            <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12L10 17L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Emergency Response</li>
+            <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12L10 17L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Seasonal Maintenance</li>
           </ul>
           <a href="#contact" class="btn btn-secondary">Talk to a Manager</a>
         </div>
@@ -331,74 +456,129 @@
     </div>
   </section>
 
+  <!-- The Story / Legacy Section -->
+  <section class="story" id="story">
+    <div class="container">
+      <div class="story-wrap">
+        <div class="story-aside reveal">
+          <p class="section-label">THE STORY</p>
+          <h2 class="section-title">Four generations.<br>One <span class="gold">name.</span></h2>
+          <div class="story-lineage" aria-hidden="true">
+            <div class="lineage-step"><span class="lineage-gen">1st</span><span class="lineage-role">Great-grandfather &mdash; Developer</span></div>
+            <div class="lineage-step"><span class="lineage-gen">2nd</span><span class="lineage-role">Grandfather &mdash; Builder</span></div>
+            <div class="lineage-step"><span class="lineage-gen">3rd</span><span class="lineage-role">Stepfather &mdash; Builder</span></div>
+            <div class="lineage-step is-now"><span class="lineage-gen">4th</span><span class="lineage-role">Hudson Development &mdash; Today</span></div>
+          </div>
+        </div>
+        <div class="story-body reveal delay-1">
+          <p class="story-lead">Building runs in the family. My great-grandfather was a developer, my grandfather a builder, my stepfather a builder &mdash; and <strong>Hudson</strong>, the name on this company, is the middle name passed down through the line. It's mine too.</p>
+          <p>My grandfather is also the one who gave me the nickname <strong>&ldquo;Goose.&rdquo;</strong> So when we say <em>the goose is loose,</em> it's not a gimmick &mdash; it's four generations of building showing up in Teton Valley to do honest work.</p>
+          <p>I spent <strong>12+ years</strong> running a painting and home-improvement business before bringing it here. My father was an immigrant from Nicaragua who built his own company from nothing &mdash; that work ethic is half of who I am, and it's in everything we touch.</p>
+          <p class="story-sign">New to the valley. Not new to the work.</p>
+          <a href="#contact" class="btn btn-secondary">Work With Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Teton Divider -->
+  <section class="teton-band" aria-label="Serving Teton Valley and Jackson Hole">
+    <div class="teton-band-photo" aria-hidden="true"></div>
+    <div class="teton-band-overlay" aria-hidden="true"></div>
+    <div class="container teton-band-inner reveal">
+      <p class="section-label gold-on-dark">NOW IN THE VALLEY</p>
+      <h2 class="section-title light">Built here.<br>Built to <span class="gold">stay.</span></h2>
+      <p class="teton-band-text">Four generations of craft, now serving Teton Valley, Idaho &amp; Jackson Hole, Wyoming.</p>
+    </div>
+  </section>
+
+  <!-- Process Band -->
+  <section class="process" aria-label="How we work">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="section-label">HOW WE WORK</p>
+        <h2 class="section-title">Simple, start to <span class="gold">finish.</span></h2>
+      </div>
+      <div class="process-grid">
+        <div class="process-step reveal">
+          <span class="process-num">1</span>
+          <h3>Reach Out</h3>
+          <p>Call, text, or use the goose. Tell us what you need &mdash; we respond within 24 hours.</p>
+        </div>
+        <div class="process-step reveal">
+          <span class="process-num">2</span>
+          <h3>Free Estimate</h3>
+          <p>We walk the project, talk scope, and give an honest quote. No pressure, no hidden fees.</p>
+        </div>
+        <div class="process-step reveal">
+          <span class="process-num">3</span>
+          <h3>We Build</h3>
+          <p>Clean, careful work on schedule &mdash; with one point of contact you can actually reach.</p>
+        </div>
+        <div class="process-step reveal">
+          <span class="process-num">4</span>
+          <h3>Done Right</h3>
+          <p>We walk it with you and stand behind the result. That's the Hudson name on the line.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Contact Section -->
   <section class="contact" id="contact">
     <div class="container">
-      <p class="section-label reveal">GET IN TOUCH</p>
-      <h2 class="section-title reveal">Let's Talk About<br>Your <span class="gold">Project</span></h2>
-      <p class="section-subtitle reveal">Ready to get started? Reach out for a free estimate. We respond within 24 hours.</p>
+      <div class="section-head reveal">
+        <p class="section-label">GET IN TOUCH</p>
+        <h2 class="section-title">Let's talk about<br>your <span class="gold">project.</span></h2>
+        <p class="section-subtitle">Ready to get started? Reach out for a free estimate &mdash; trades or digital. We respond within 24 hours.</p>
+      </div>
 
       <div class="contact-grid">
         <div class="contact-info reveal">
-          <div class="contact-card">
-            <div class="contact-icon">
-              <svg viewBox="0 0 32 32" fill="none">
-                <path d="M6 6H26C27.1 6 28 6.9 28 8V24C28 25.1 27.1 26 26 26H6C4.9 26 4 25.1 4 24V8C4 6.9 4.9 6 6 6Z" stroke="currentColor" stroke-width="2"/>
-                <path d="M28 8L16 18L4 8" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <div>
-              <p class="contact-label">Email</p>
-              <a href="mailto:hudsontetondev@gmail.com" class="contact-value">hudsontetondev@gmail.com</a>
-            </div>
-          </div>
-          <div class="contact-card">
-            <div class="contact-icon">
-              <svg viewBox="0 0 32 32" fill="none">
-                <path d="M20 28C20 28 27 24 27 16C27 10 22 5 16 5C10 5 5 10 5 16C5 24 12 28 12 28" stroke="currentColor" stroke-width="2"/>
-                <path d="M12 28H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <path d="M10 13L14 17L22 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <div>
-              <p class="contact-label">Phone</p>
-              <a href="tel:+12086718686" class="contact-value">(208) 671-8686</a>
-            </div>
-          </div>
-          <div class="contact-card">
-            <div class="contact-icon">
-              <svg viewBox="0 0 32 32" fill="none">
-                <path d="M18 4H14C8.5 4 4 8.5 4 14V18C4 23.5 8.5 28 14 28H16V22H13V19H16V16.5C16 14 17.5 12 20 12H23V15H20.5C19.5 15 19 15.5 19 16.5V19H23L22 22H19V28H18C23.5 28 28 23.5 28 18V14C28 8.5 23.5 4 18 4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <div>
-              <p class="contact-label">Facebook</p>
-              <a href="https://www.facebook.com/profile.php?id=61572079917538" class="contact-value" target="_blank" rel="noopener">Hudson Development LLC</a>
-            </div>
-          </div>
-          <div class="contact-card">
-            <div class="contact-icon">
-              <svg viewBox="0 0 32 32" fill="none">
-                <rect x="4" y="4" width="24" height="24" rx="6" stroke="currentColor" stroke-width="2"/>
-                <circle cx="16" cy="16" r="6" stroke="currentColor" stroke-width="2"/>
-                <circle cx="23" cy="9" r="1.5" fill="currentColor"/>
-              </svg>
-            </div>
-            <div>
-              <p class="contact-label">Instagram</p>
-              <a href="https://www.instagram.com/hudsontetondev" class="contact-value" target="_blank" rel="noopener">@hudsontetondev</a>
-            </div>
-          </div>
-          <div class="contact-card">
-            <div class="contact-icon">
-              <svg viewBox="0 0 32 32" fill="none">
-                <path d="M16 4L20 12L28 13L22 19L23 28L16 24L9 28L10 19L4 13L12 12L16 4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <div>
-              <p class="contact-label">Service Area</p>
-              <p class="contact-value-text">Teton Valley, ID &amp; Jackson, WY<br>and Surrounding Areas</p>
-            </div>
+          <a href="tel:+12086718686" class="contact-card">
+            <span class="contact-icon">
+              <svg viewBox="0 0 32 32" fill="none"><path d="M20 28C20 28 27 24 27 16C27 10 22 5 16 5C10 5 5 10 5 16C5 24 12 28 12 28" stroke="currentColor" stroke-width="2"/><path d="M12 28H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M10 13L14 17L22 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <span>
+              <span class="contact-label">Phone</span>
+              <span class="contact-value">(208) 671-8686</span>
+            </span>
+          </a>
+          <a href="mailto:hudsontetondev@gmail.com" class="contact-card">
+            <span class="contact-icon">
+              <svg viewBox="0 0 32 32" fill="none"><path d="M6 6H26C27.1 6 28 6.9 28 8V24C28 25.1 27.1 26 26 26H6C4.9 26 4 25.1 4 24V8C4 6.9 4.9 6 6 6Z" stroke="currentColor" stroke-width="2"/><path d="M28 8L16 18L4 8" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+            </span>
+            <span>
+              <span class="contact-label">Email</span>
+              <span class="contact-value">hudsontetondev@gmail.com</span>
+            </span>
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=61572079917538" target="_blank" rel="noopener" class="contact-card">
+            <span class="contact-icon">
+              <svg viewBox="0 0 32 32" fill="none"><path d="M18 4H14C8.5 4 4 8.5 4 14V18C4 23.5 8.5 28 14 28H16V22H13V19H16V16.5C16 14 17.5 12 20 12H23V15H20.5C19.5 15 19 15.5 19 16.5V19H23L22 22H19V28H18C23.5 28 28 23.5 28 18V14C28 8.5 23.5 4 18 4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+            </span>
+            <span>
+              <span class="contact-label">Facebook</span>
+              <span class="contact-value">Hudson Development LLC</span>
+            </span>
+          </a>
+          <a href="https://www.instagram.com/hudsontetondev" target="_blank" rel="noopener" class="contact-card">
+            <span class="contact-icon">
+              <svg viewBox="0 0 32 32" fill="none"><rect x="4" y="4" width="24" height="24" rx="6" stroke="currentColor" stroke-width="2"/><circle cx="16" cy="16" r="6" stroke="currentColor" stroke-width="2"/><circle cx="23" cy="9" r="1.5" fill="currentColor"/></svg>
+            </span>
+            <span>
+              <span class="contact-label">Instagram</span>
+              <span class="contact-value">@hudsontetondev</span>
+            </span>
+          </a>
+          <div class="contact-card contact-card--static">
+            <span class="contact-icon">
+              <svg viewBox="0 0 32 32" fill="none"><path d="M16 4L20 12L28 13L22 19L23 28L16 24L9 28L10 19L4 13L12 12L16 4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+            </span>
+            <span>
+              <span class="contact-label">Service Area</span>
+              <span class="contact-value-text">Teton Valley, ID &amp; Jackson, WY<br>and surrounding areas</span>
+            </span>
           </div>
         </div>
 
@@ -417,14 +597,15 @@
           <div class="form-group">
             <select id="service" name="service">
               <option value="" disabled selected>What do you need help with?</option>
-              <option value="painting">Interior & Exterior Painting</option>
+              <option value="painting">Interior &amp; Exterior Painting</option>
               <option value="deck-staining">Deck Staining</option>
-              <option value="waterproofing">Wood & Surface Waterproofing</option>
-              <option value="roofing">Roof Replacement</option>
-              <option value="pressure-washing">Pressure Washing</option>
+              <option value="waterproofing">Wood &amp; Surface Waterproofing</option>
+              <option value="roofing">Roofing &amp; Storm Restoration</option>
+              <option value="seasonal">Seasonal Property Care</option>
               <option value="security">Security System Installation</option>
-              <option value="contracting">General Contracting & Carpentry</option>
-              <option value="concierge">Concierge / Local Pro Referral</option>
+              <option value="contracting">General Contracting &amp; Carpentry</option>
+              <option value="property-mgmt">Property Management</option>
+              <option value="web-ai">Website / AI / Automation</option>
               <option value="other">Other</option>
             </select>
           </div>
@@ -441,7 +622,7 @@
   <footer class="footer">
     <div class="container footer-content">
       <div class="footer-brand">
-        <div class="logo-icon">
+        <span class="logo-icon">
           <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Hudson goose mark">
             <path d="M14 40C14 32 22 28 32 28C44 28 52 32 54 38C56 44 50 48 38 48C22 48 14 46 14 40Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
             <path d="M14 38L8 34M14 40L6 40M14 42L8 46" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -453,14 +634,14 @@
             <path d="M28 48L28 56M38 48L38 56" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
             <path d="M25 56L31 56M35 56L41 56" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
           </svg>
-        </div>
-        <div class="logo-text">
+        </span>
+        <span class="logo-text">
           <span class="logo-hudson">HUDSON</span>
-          <span class="logo-dev">DEVELOPMENT LLC</span>
-          <span class="logo-tagline">"The Goose is Loose"</span>
-        </div>
+          <span class="logo-dev">DEVELOPMENT&nbsp;LLC</span>
+          <span class="logo-tagline">&ldquo;The Goose is Loose&rdquo;</span>
+        </span>
       </div>
-      <p class="footer-text">Hudson Development LLC &mdash; Serving Teton Valley, ID &amp; Jackson, WY</p>
+      <p class="footer-text">Fourth-generation builder &mdash; serving Teton Valley, ID &amp; Jackson, WY</p>
       <div class="footer-links">
         <a href="tel:+12086718686">(208) 671-8686</a>
         <span class="footer-divider">&bull;</span>
@@ -475,6 +656,23 @@
       <p class="footer-copy">&copy; 2026 Hudson Development LLC. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Photo viewer">
+    <button class="lightbox-btn lightbox-close" id="lbClose" aria-label="Close">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+    </button>
+    <button class="lightbox-btn lightbox-prev" id="lbPrev" aria-label="Previous">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M15 5L8 12L15 19" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <figure class="lightbox-figure">
+      <img class="lightbox-img" id="lbImg" src="" alt="">
+      <figcaption class="lightbox-cap" id="lbCap"></figcaption>
+    </figure>
+    <button class="lightbox-btn lightbox-next" id="lbNext" aria-label="Next">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M9 5L16 12L9 19" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
 
   <!-- Chat Widget: "Ask Hudson the Goose" -->
   <div class="chat-widget" id="chatWidget">
@@ -512,7 +710,7 @@
         </div>
         <div class="chat-header-text">
           <p class="chat-header-name">Hudson the Goose</p>
-          <p class="chat-header-tagline">"The Goose is Loose"</p>
+          <p class="chat-header-tagline">&ldquo;The Goose is Loose&rdquo;</p>
           <p class="chat-header-status"><span class="chat-status-dot"></span>Online &mdash; ask me anything</p>
         </div>
         <button class="chat-close" id="chatClose" aria-label="Close chat">
@@ -520,13 +718,8 @@
         </button>
       </div>
 
-      <div class="chat-messages" id="chatMessages">
-        <!-- Messages injected by JS -->
-      </div>
-
-      <div class="chat-quick-replies" id="chatQuickReplies">
-        <!-- Quick reply buttons injected by JS -->
-      </div>
+      <div class="chat-messages" id="chatMessages"></div>
+      <div class="chat-quick-replies" id="chatQuickReplies"></div>
 
       <form class="chat-input-row" id="chatInputForm" autocomplete="off">
         <input type="text" id="chatInput" class="chat-input" placeholder="Type your answer..." disabled aria-label="Type your answer">
