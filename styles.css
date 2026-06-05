@@ -710,6 +710,15 @@ h1, h2, h3, h4 {
   color: var(--gold-dark) !important;
   margin: 24px 0 30px !important;
 }
+.story-name {
+  display: inline-block;
+  margin-top: 8px;
+  font-style: normal;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  color: var(--bone);
+  opacity: 0.78;
+}
 
 /* ========================================
    Process
