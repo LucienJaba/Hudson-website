@@ -1101,6 +1101,8 @@ a.contact-card:hover .contact-value { color: var(--gold-dark); }
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
 }
+/* Center a lone tile on the last row (e.g. the 7th of 7) so the grid stays balanced */
+.work-grid .work-tile:last-child:nth-child(3n + 1) { grid-column: 2; }
 .work-tile {
   position: relative;
   display: block;
