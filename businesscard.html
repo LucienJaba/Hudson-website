@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hudson Development LLC — Business Card</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600;9..144,700&family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0B1D3A;
+      --navy-light: #122B52;
+      --ink: #04090F;
+      --white: #FFFFFF;
+      --bone: #F4F1E9;
+      --bone-deep: #EAE4D6;
+      --gold: #C9A84C;
+      --gold-light: #E2C878;
+      --gold-dark: #A88B35;
+      --gray: #7C8AA1;
+      --display: 'Fraunces', Georgia, serif;
+      --body: 'Hanken Grotesk', -apple-system, sans-serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: var(--body);
+      background: #1a1a2e;
+      color: var(--white);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      gap: 48px;
+    }
+
+    h1 {
+      font-family: var(--display);
+      font-weight: 300;
+      font-size: 1.1rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gray);
+    }
+
+    .cards {
+      display: flex;
+      gap: 48px;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .card-label {
+      font-family: var(--body);
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gray);
+    }
+
+    .card {
+      width: 3.5in;
+      height: 2in;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 24px 60px rgba(6, 15, 31, 0.5);
+      position: relative;
+    }
+
+    /* ── FRONT ── */
+    .card-front {
+      background: var(--navy);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      border: 1px solid rgba(201, 168, 76, 0.15);
+    }
+
+    .card-front::before {
+      content: '';
+      position: absolute;
+      inset: 6px;
+      border: 1px solid rgba(201, 168, 76, 0.12);
+      border-radius: 4px;
+      pointer-events: none;
+    }
+
+    .logo-mark {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1px;
+      margin-bottom: 12px;
+    }
+
+    .logo-letter {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 38px;
+      color: var(--gold);
+      line-height: 1;
+    }
+
+    .logo-goose {
+      color: var(--gold);
+      margin: 0 -2px;
+      position: relative;
+      top: 2px;
+    }
+
+    .company-name {
+      font-family: var(--display);
+      font-weight: 400;
+      font-size: 11px;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-align: center;
+    }
+
+    .front-divider {
+      width: 48px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold-dark), transparent);
+      margin: 8px 0;
+    }
+
+    .company-sub {
+      font-family: var(--body);
+      font-weight: 400;
+      font-size: 6.5px;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--gray);
+    }
+
+    /* ── BACK ── */
+    .card-back {
+      background: var(--bone);
+      display: flex;
+      padding: 0;
+    }
+
+    .back-accent {
+      width: 6px;
+      background: linear-gradient(180deg, var(--navy), var(--navy-light));
+      flex-shrink: 0;
+    }
+
+    .back-content {
+      flex: 1;
+      padding: 16px 18px 14px 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .back-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .person-info { flex: 1; }
+
+    .person-name {
+      font-family: var(--display);
+      font-weight: 600;
+      font-size: 13px;
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 2px;
+    }
+
+    .person-title {
+      font-family: var(--body);
+      font-weight: 500;
+      font-size: 7px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+    }
+
+    .back-goose-mark {
+      color: var(--navy);
+      opacity: 0.08;
+      flex-shrink: 0;
+      margin-top: -4px;
+      margin-right: -4px;
+    }
+
+    .back-divider {
+      height: 1px;
+      background: linear-gradient(90deg, var(--gold), var(--bone-deep));
+      margin: 8px 0;
+    }
+
+    .services {
+      font-family: var(--body);
+      font-weight: 500;
+      font-size: 7px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .services span {
+      color: var(--gold-dark);
+      margin: 0 6px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5px 12px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .contact-item svg {
+      flex-shrink: 0;
+      color: var(--gold-dark);
+    }
+
+    .contact-item span {
+      font-family: var(--body);
+      font-size: 6.5px;
+      font-weight: 400;
+      color: var(--navy);
+      letter-spacing: 0.02em;
+    }
+
+    .back-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-top: 6px;
+    }
+
+    .location {
+      font-family: var(--body);
+      font-size: 6px;
+      font-weight: 400;
+      color: var(--gray);
+      letter-spacing: 0.08em;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .social-links a {
+      color: var(--navy);
+      opacity: 0.5;
+      transition: opacity 0.2s;
+      display: flex;
+    }
+
+    .social-links a:hover { opacity: 1; }
+
+    /* ── PRINT ── */
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+        gap: 24px;
+      }
+      h1, .card-label { display: none; }
+      .card { box-shadow: none; border: 0.5px solid #ccc; }
+      .cards { gap: 24px; }
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        width: calc(100vw - 40px);
+        height: auto;
+        aspect-ratio: 3.5 / 2;
+      }
+      .logo-letter { font-size: 28px; }
+      .company-name { font-size: 9px; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Business Card Preview</h1>
+
+  <div class="cards">
+
+    <!-- ─── FRONT ─── -->
+    <div class="card-wrapper">
+      <div class="card card-front">
+        <div class="logo-mark">
+          <span class="logo-letter">H</span>
+          <svg class="logo-goose" width="44" height="44" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round">
+              <path d="M14 40C14 32 22 28 32 28C44 28 52 32 54 38C56 44 50 48 38 48C22 48 14 46 14 40Z"/>
+              <path d="M14 38L8 34M14 40L6 40M14 42L8 46" stroke-width="2"/>
+              <path d="M44 28C44 18 48 12 52 10"/>
+              <circle cx="52" cy="10" r="4"/>
+              <path d="M56 10L60 11L56 12" stroke-width="2"/>
+              <circle cx="53" cy="9" r="0.9" fill="currentColor" stroke="none"/>
+              <path d="M28 36C32 32 40 32 46 36" stroke-width="1.8"/>
+              <path d="M28 48L28 56M38 48L38 56" stroke-width="2"/>
+              <path d="M25 56L31 56M35 56L41 56" stroke-width="2"/>
+            </g>
+          </svg>
+          <span class="logo-letter">D</span>
+        </div>
+        <div class="company-name">Hudson Development</div>
+        <div class="front-divider"></div>
+        <div class="company-sub">Limited Liability Company</div>
+      </div>
+      <span class="card-label">Front</span>
+    </div>
+
+    <!-- ─── BACK ─── -->
+    <div class="card-wrapper">
+      <div class="card card-back">
+        <div class="back-accent"></div>
+        <div class="back-content">
+          <div>
+            <div class="back-top">
+              <div class="person-info">
+                <div class="person-name">Lucien Hudson Gutierrez</div>
+                <div class="person-title">Owner &amp; Operator</div>
+              </div>
+              <svg class="back-goose-mark" width="48" height="48" viewBox="0 0 64 64" fill="none">
+                <g stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round">
+                  <path d="M14 40C14 32 22 28 32 28C44 28 52 32 54 38C56 44 50 48 38 48C22 48 14 46 14 40Z"/>
+                  <path d="M14 38L8 34M14 40L6 40M14 42L8 46" stroke-width="2"/>
+                  <path d="M44 28C44 18 48 12 52 10"/>
+                  <circle cx="52" cy="10" r="4"/>
+                  <path d="M56 10L60 11L56 12" stroke-width="2"/>
+                  <circle cx="53" cy="9" r="0.9" fill="currentColor" stroke="none"/>
+                  <path d="M28 48L28 56M38 48L38 56" stroke-width="2"/>
+                  <path d="M25 56L31 56M35 56L41 56" stroke-width="2"/>
+                </g>
+              </svg>
+            </div>
+            <div class="back-divider"></div>
+            <div class="services">Home Improvements <span>&bull;</span> Web Design</div>
+
+            <div class="contact-grid">
+              <div class="contact-item">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.11 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                <span>(208) 671-8686</span>
+              </div>
+              <div class="contact-item">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <span>hudsontetondev@gmail.com</span>
+              </div>
+              <div class="contact-item">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+                <span>hudsontetondev.com</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="back-bottom">
+            <div class="location">Teton Valley, ID &nbsp;/&nbsp; Jackson, WY</div>
+            <div class="social-links">
+              <a href="https://www.instagram.com/hudsontetondev" aria-label="Instagram">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </a>
+              <a href="https://www.facebook.com/profile.php?id=61572079917538" aria-label="Facebook">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <span class="card-label">Back</span>
+    </div>
+
+  </div>
+
+</body>
+</html>
