@@ -349,7 +349,7 @@
           </div>
         </div>
 
-        <form class="contact-form reveal delay-1" id="contactForm" action="https://formspree.io/f/placeholder" method="POST">
+        <form class="contact-form reveal delay-1" id="contactForm" action="mailto:hudsontetondev@gmail.com" method="POST" enctype="text/plain">
           <div class="form-row">
             <div class="form-group">
               <input type="text" id="name" name="name" placeholder="Your Name" required>
@@ -414,8 +414,6 @@
         <a href="https://www.facebook.com/profile.php?id=61572079917538" target="_blank" rel="noopener">Facebook</a>
         <span class="footer-divider">&bull;</span>
         <a href="https://www.instagram.com/hudsontetondev" target="_blank" rel="noopener">Instagram</a>
-        <span class="footer-divider">&bull;</span>
-        <a href="qr.html" target="_blank" rel="noopener">QR Code</a>
       </div>
       <p class="footer-copy">&copy; 2026 Hudson Development LLC. All rights reserved.</p>
     </div>
@@ -503,21 +501,5 @@
   </div>
 
   <script src="script.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-  <script>
-    (function initQR() {
-      if (typeof QRCode === 'undefined') { setTimeout(initQR, 200); return; }
-      var el = document.getElementById('qrcode');
-      if (!el) return;
-      new QRCode(el, {
-        text: 'https://hudsontetondev.com',
-        width: 100,
-        height: 100,
-        colorDark: '#0B1D3A',
-        colorLight: '#F4F1E9',
-        correctLevel: QRCode.CorrectLevel.M
-      });
-    })();
-  </script>
 </body>
 </html>

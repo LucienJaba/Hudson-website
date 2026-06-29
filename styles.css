@@ -866,14 +866,6 @@ a.contact-card:hover { transform: translateX(4px); box-shadow: var(--shadow); bo
 .contact-value { display: block; font-size: 1.04rem; font-weight: 600; color: var(--navy); }
 a.contact-card:hover .contact-value { color: var(--gold-dark); }
 .contact-value-text { display: block; font-size: 0.98rem; font-weight: 500; color: var(--navy); line-height: 1.5; }
-.contact-qr {
-  flex-direction: column; align-items: center; justify-content: center;
-  padding: 24px; text-align: center; gap: 12px;
-}
-.contact-qr .contact-label { font-size: 0.68rem; }
-.contact-qr #qrcode { line-height: 0; }
-.contact-qr #qrcode img { border-radius: 4px; }
-.contact-qr .contact-label { margin-bottom: 0; }
 
 /* ---- Form ---- */
 .contact-form {
