@@ -195,7 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const chatFAQ = {
     services: {
       label: 'What services do you offer?',
-      reply: `We're a full-service contractor — general contracting and carpentry, roof replacements, interior and exterior painting, deck staining, waterproofing, seasonal property care, and security camera installation. We also build <strong>websites, AI tools, and automation</strong> for local businesses. Want details on any of it?`,
+      reply: `We're a full-service contractor — general contracting and carpentry, roofing, interior and exterior painting, deck staining, waterproofing, and pressure washing. We also build <strong>websites and AI solutions</strong> for local businesses. Want details on any of it?`,
       next: ['painting', 'roofing', 'digital', 'property', 'estimate']
     },
     painting: {
@@ -204,8 +204,8 @@ document.addEventListener('DOMContentLoaded', () => {
       next: ['estimate', 'area', 'services']
     },
     roofing: {
-      label: 'Roofing & storm',
-      reply: `Full roof replacements built for heavy snow loads, plus <strong>hail and wind damage</strong> repair. We handle insurance claims end-to-end. Want me to set up a free inspection?`,
+      label: 'Roofing',
+      reply: `Full roof replacements built for heavy snow loads. Want me to set up a free estimate?`,
       next: ['estimate', 'area', 'services']
     },
     digital: {
@@ -266,7 +266,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let chatStarted = false;
 
   const leadState = { step: 'idle', data: { name: '', contact: '', service: '', time: '' } };
-  const SERVICE_OPTIONS = ['Roofing & Storm', 'Painting', 'Property Mgmt', 'Website / AI', 'General Contracting', 'Other'];
+  const SERVICE_OPTIONS = ['Roofing', 'Painting', 'Property Mgmt', 'Website / AI Solutions', 'General Contracting', 'Other'];
   const TIME_OPTIONS = ['Morning', 'Midday', 'Afternoon', 'Evening'];
 
   function appendMessage(text, sender) {

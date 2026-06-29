@@ -866,6 +866,14 @@ a.contact-card:hover { transform: translateX(4px); box-shadow: var(--shadow); bo
 .contact-value { display: block; font-size: 1.04rem; font-weight: 600; color: var(--navy); }
 a.contact-card:hover .contact-value { color: var(--gold-dark); }
 .contact-value-text { display: block; font-size: 0.98rem; font-weight: 500; color: var(--navy); line-height: 1.5; }
+.contact-qr {
+  flex-direction: column; align-items: center; justify-content: center;
+  padding: 24px; text-align: center; gap: 12px;
+}
+.contact-qr .contact-label { font-size: 0.68rem; }
+.contact-qr #qrcode { line-height: 0; }
+.contact-qr #qrcode img { border-radius: 4px; }
+.contact-qr .contact-label { margin-bottom: 0; }
 
 /* ---- Form ---- */
 .contact-form {
@@ -1358,4 +1366,43 @@ a.contact-card:hover .contact-value { color: var(--gold-dark); }
 @media (max-width: 560px) {
   .lightbox-prev { left: 10px; } .lightbox-next { right: 10px; }
   .lightbox-btn { width: 42px; height: 42px; }
+}
+
+/* ---- Portfolio Links ---- */
+.portfolio-links {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(11,29,58,0.08);
+}
+.portfolio-heading {
+  font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--gray); margin-bottom: 8px;
+}
+.portfolio-link-item {
+  display: block; font-size: 0.92rem; font-weight: 500;
+  color: var(--navy); text-decoration: none;
+  padding: 4px 0; transition: color 0.2s var(--ease);
+}
+.portfolio-link-item:hover { color: var(--gold-dark); }
+
+/* ---- Sticky Call Button (mobile only) ---- */
+.sticky-call {
+  display: none;
+  position: fixed; bottom: 0; left: 0; right: 0;
+  z-index: 900;
+  background: var(--gold);
+  color: var(--navy);
+  text-decoration: none;
+  padding: 14px 20px;
+  align-items: center; justify-content: center; gap: 10px;
+  font-family: var(--body);
+  font-size: 1rem; font-weight: 600; letter-spacing: 0.06em;
+  text-transform: uppercase;
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+}
+.sticky-call svg { width: 20px; height: 20px; flex-shrink: 0; }
+@media (max-width: 768px) {
+  .sticky-call { display: flex; }
+  .footer { padding-bottom: 70px; }
+  .chat-toggle { bottom: 70px; }
 }
