@@ -130,34 +130,47 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ---- Form handling ----
+  // ---- Form handling (Formspree) ----
   const form = document.getElementById('contactForm');
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-    const formData = new FormData(form);
-    const name = formData.get('name');
-    const email = formData.get('email');
-    const phone = formData.get('phone');
-    const service = formData.get('service');
-    const message = formData.get('message');
-
-    const subject = encodeURIComponent(`New Inquiry from ${name} — Hudson Development`);
-    const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\nPhone: ${phone || 'Not provided'}\nService: ${service || 'Not specified'}\n\nMessage:\n${message}`
-    );
-    window.location.href = `mailto:hudsontetondev@gmail.com?subject=${subject}&body=${body}`;
-
     const btn = form.querySelector('button[type="submit"]');
     const originalText = btn.textContent;
-    btn.textContent = 'Opening Email Client…';
-    btn.style.background = '#2d8a4e';
-    btn.style.color = '#fff';
-    setTimeout(() => {
-      btn.textContent = originalText;
-      btn.style.background = '';
-      btn.style.color = '';
-      form.reset();
-    }, 3000);
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(r => {
+      if (r.ok) {
+        btn.textContent = 'Message Sent ✓';
+        btn.style.background = '#2d8a4e';
+        btn.style.color = '#fff';
+        form.reset();
+      } else {
+        btn.textContent = 'Error — Try Again';
+        btn.style.background = '#a03030';
+        btn.style.color = '#fff';
+      }
+      setTimeout(() => {
+        btn.textContent = originalText;
+        btn.style.background = '';
+        btn.style.color = '';
+        btn.disabled = false;
+      }, 3000);
+    }).catch(() => {
+      btn.textContent = 'Error — Try Again';
+      btn.style.background = '#a03030';
+      btn.style.color = '#fff';
+      setTimeout(() => {
+        btn.textContent = originalText;
+        btn.style.background = '';
+        btn.style.color = '';
+        btn.disabled = false;
+      }, 3000);
+    });
   });
 
   const serviceSelect = document.getElementById('service');
