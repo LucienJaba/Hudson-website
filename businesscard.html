@@ -63,9 +63,18 @@
     .bk-sline span{font-size:8px;font-weight:700;color:var(--navy);}
 
     @media print{
-      body{background:#fff;padding:0;gap:24px;}
+      @page{size:3.75in 2.25in;margin:0;}
+      html,body{background:#fff;margin:0;padding:0;}
+      body{display:block;gap:0;}
       h1,.card-label{display:none;}
-      .card{box-shadow:none;}
+      .cards{display:block;margin:0;gap:0;}
+      .card-wrapper{display:flex;align-items:center;justify-content:center;width:3.75in;height:2.25in;margin:0;gap:0;}
+      .card-wrapper:first-of-type{break-after:page;page-break-after:always;}
+      .card{border-radius:0;box-shadow:none;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+      /* full-bleed: extend edge colors 0.14in past the 3.5x2 trim */
+      .card-front{box-shadow:0 0 0 0.14in var(--ink);}
+      .card-back{box-shadow:0 0 0 0.14in var(--bone);}
+      .back-accent{box-shadow:-0.14in 0 0 0 var(--navy);}
     }
     @media (max-width:480px){
       .card{width:calc(100vw - 40px);height:auto;aspect-ratio:3.5/2;}
