@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hudson Development — Front Gold-Foil Layer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Crimson+Pro:ital,wght@0,600;0,700;1,600;1,700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* FOIL LAYER: everything that should be stamped in gold foil is solid BLACK on WHITE.
+       Same trim size & positions as the printed front so it registers exactly. */
+    :root{
+      --foil:#000;
+      --display:'Italiana',Georgia,serif;
+      --serif:'Crimson Pro',Georgia,serif;
+      --body:'Outfit',-apple-system,sans-serif;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--body);background:#cfcfcf;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;padding:42px 20px;color:#333;}
+    h1{font-family:var(--body);font-weight:600;font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;color:#555;}
+    .card{width:3.5in;height:2in;overflow:hidden;position:relative;}
+
+    .card-front{background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;padding-bottom:34px;border:1px solid var(--foil);}
+    .fc-goose{width:38px;height:38px;color:var(--foil);}
+    .fc-tagline{font-family:var(--serif);font-style:italic;font-weight:600;font-size:10.5px;letter-spacing:.01em;color:var(--foil);margin-top:11px;}
+    .fc-word{font-family:var(--display);font-weight:500;font-size:20px;letter-spacing:.155em;text-indent:.155em;text-transform:uppercase;color:var(--foil);margin-top:8px;}
+    .fc-rule{width:66px;height:1px;background:var(--foil);margin:6px 0;}
+    .fc-llc{font-family:var(--body);font-weight:600;font-size:7px;letter-spacing:.5em;text-indent:.5em;text-transform:uppercase;color:var(--foil);}
+    .fc-foot{position:absolute;left:20px;right:20px;bottom:16px;display:flex;justify-content:space-between;align-items:center;}
+    .fc-loc{font-family:var(--body);font-size:9px;font-weight:500;letter-spacing:.015em;color:var(--foil);line-height:1.6;}
+    .fc-cell{position:relative;top:1.5px;font-family:var(--body);font-size:10px;font-weight:600;letter-spacing:.02em;color:var(--foil);}
+
+    @media print{
+      @page{size:3.75in 2.25in;margin:0;}
+      html,body{background:#fff;margin:0;padding:0;}
+      body{display:block;gap:0;}
+      h1{display:none;}
+      .card-wrapper{display:flex;align-items:center;justify-content:center;width:3.75in;height:2.25in;margin:0;}
+      .card{overflow:visible;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Front — Gold Foil Layer (black = foil)</h1>
+
+  <div class="card-wrapper">
+    <div class="card card-front">
+      <svg class="fc-goose" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" stroke-linecap="round">
+          <path d="M13 40C13 33 21 28.5 31 28.5C43 28.5 51 32.5 53.5 38.5C55.5 43.5 50 48 38 48C23 48 13 47 13 40Z"/>
+          <path d="M13 38L8.5 36.5M13 40.5L8 40.5M13 43L8.5 44.5" stroke-width="1.5"/>
+          <path d="M46 30.5C49.5 23 44.5 15.5 50 11.5"/>
+          <circle cx="51.3" cy="10.2" r="3.9"/>
+          <path d="M54.5 9.2L60 10.6L54.5 12.2" stroke-width="1.5"/>
+          <circle cx="52.4" cy="9.1" r="0.9" fill="currentColor" stroke="none"/>
+          <path d="M26 36C31 31 40 31 47 35.5" stroke-width="1.4"/>
+          <path d="M29 48L29 55.5M37 48L37 55.5" stroke-width="1.6"/>
+          <path d="M25.5 55.5L29 57.6L32.5 55.5M33.5 55.5L37 57.6L40.5 55.5" stroke-width="1.6"/>
+        </g>
+      </svg>
+      <div class="fc-tagline">&ldquo;The Goose is Loose&rdquo;</div>
+      <div class="fc-word">Hudson Development</div>
+      <div class="fc-rule"></div>
+      <div class="fc-llc">LLC</div>
+      <div class="fc-foot">
+        <div class="fc-loc">Teton Valley, Idaho<br>Jackson, Wyoming</div>
+        <div class="fc-cell">(208) 671-8686</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
