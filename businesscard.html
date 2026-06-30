@@ -27,14 +27,15 @@
     .card{width:3.5in;height:2in;border-radius:8px;overflow:hidden;box-shadow:0 24px 60px rgba(6,15,31,.5);position:relative;}
 
     /* ── FRONT ── */
-    .card-front{background:radial-gradient(ellipse 120% 95% at 50% 36%,var(--navy-light) 0%,var(--navy) 55%,var(--ink) 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;padding-bottom:30px;border:1px solid rgba(201,168,76,.6);}
+    .card-front{background:radial-gradient(ellipse 120% 95% at 50% 36%,var(--navy-light) 0%,var(--navy) 55%,var(--ink) 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;padding-bottom:58px;border:1px solid rgba(201,168,76,.6);}
     .fc-goose{width:46px;height:46px;color:var(--gold);}
     .fc-tagline{font-family:var(--serif);font-style:italic;font-weight:600;font-size:10.5px;letter-spacing:.01em;color:var(--gold-light);margin-top:11px;}
-    .fc-word{font-family:var(--display);font-weight:600;font-size:20.5px;letter-spacing:.085em;text-indent:.085em;text-transform:uppercase;color:var(--gold);margin-top:8px;text-shadow:0 0.7px 1.3px rgba(4,9,15,0.7),0 1.4px 2.4px rgba(4,9,15,0.4),-0.3px -0.4px 0.4px rgba(228,205,140,0.4);}
+    .fc-word{font-family:var(--display);font-weight:500;font-size:20px;letter-spacing:.155em;text-indent:.155em;text-transform:uppercase;color:var(--gold);margin-top:8px;}
     .fc-rule{width:66px;height:1px;background:var(--gold-dark);margin:6px 0;}
     .fc-llc{font-family:var(--body);font-weight:600;font-size:7px;letter-spacing:.5em;text-indent:.5em;text-transform:uppercase;color:var(--gold-light);}
-    .fc-loc{position:absolute;left:20px;bottom:17px;font-size:9.5px;font-weight:500;color:var(--gold-light);line-height:1.5;}
-    .fc-cell{position:absolute;right:20px;bottom:20px;font-size:11px;font-weight:700;color:var(--gold-light);}
+    .fc-foot{position:absolute;left:20px;right:20px;bottom:22px;display:flex;justify-content:space-between;align-items:center;}
+    .fc-loc{font-family:var(--body);font-size:9px;font-weight:500;letter-spacing:.015em;color:var(--gold-light);line-height:1.6;}
+    .fc-cell{position:relative;top:1.5px;font-family:var(--body);font-size:10px;font-weight:600;letter-spacing:.02em;color:var(--gold-light);}
 
     /* ── BACK ── */
     .card-back{background:var(--bone);display:flex;border:1px solid rgba(201,168,76,.5);}
@@ -72,6 +73,7 @@
       .card-wrapper{display:flex;align-items:center;justify-content:center;width:3.75in;height:2.25in;margin:0;gap:0;}
       .card-wrapper:first-of-type{break-after:page;page-break-after:always;}
       .card{border-radius:0;box-shadow:none;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+      /* full-bleed: extend edge colors 0.14in past the 3.5x2 trim */
       .card-front{box-shadow:0 0 0 0.14in var(--ink);}
       .card-back{box-shadow:0 0 0 0.14in var(--bone);}
       .back-accent{box-shadow:-0.14in 0 0 0 var(--navy);}
@@ -93,22 +95,24 @@
         <svg class="fc-goose" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round">
             <path d="M13 40C13 33 21 28.5 31 28.5C43 28.5 51 32.5 53.5 38.5C55.5 43.5 50 48 38 48C23 48 13 47 13 40Z"/>
-            <path d="M13 37.5C10 35.5 8 34 6 33M13 40.5L5.5 40.5M13 43C10.5 44.8 9 46.5 7 48.5" stroke-width="2"/>
+            <path d="M13 38L8.5 36.5M13 40.5L8 40.5M13 43L8.5 44.5" stroke-width="2"/>
             <path d="M46 30.5C49.5 23 44.5 15.5 50 11.5"/>
             <circle cx="51.3" cy="10.2" r="3.9"/>
             <path d="M54.5 9.2L60 10.6L54.5 12.2" stroke-width="2"/>
             <circle cx="52.4" cy="9.1" r="0.95" fill="currentColor" stroke="none"/>
             <path d="M26 36C31 31 40 31 47 35.5" stroke-width="1.8"/>
-            <path d="M29 48L29 56M37 48L37 56" stroke-width="2"/>
-            <path d="M26 56.5L32 56.5M34 56.5L40 56.5" stroke-width="2"/>
+            <path d="M29 48L29 55.5M37 48L37 55.5" stroke-width="2"/>
+            <path d="M25.5 55.5L29 57.6L32.5 55.5M33.5 55.5L37 57.6L40.5 55.5" stroke-width="2"/>
           </g>
         </svg>
         <div class="fc-tagline">&ldquo;The Goose is Loose&rdquo;</div>
         <div class="fc-word">Hudson Development</div>
         <div class="fc-rule"></div>
         <div class="fc-llc">LLC</div>
-        <div class="fc-loc">Teton Valley, Idaho<br>Jackson, Wyoming</div>
-        <div class="fc-cell">(208) 671-8686</div>
+        <div class="fc-foot">
+          <div class="fc-loc">Teton Valley, Idaho<br>Jackson, Wyoming</div>
+          <div class="fc-cell">(208) 671-8686</div>
+        </div>
       </div>
       <span class="card-label">Front</span>
     </div>
