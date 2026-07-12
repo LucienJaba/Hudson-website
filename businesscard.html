@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,43 +26,51 @@
     .card{width:3.5in;height:2in;border-radius:8px;overflow:hidden;box-shadow:0 24px 60px rgba(6,15,31,.5);position:relative;}
 
     /* ── FRONT ── */
-    .card-front{background:radial-gradient(ellipse 120% 95% at 50% 36%,var(--navy-light) 0%,var(--navy) 55%,var(--ink) 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;padding-bottom:34px;border:1px solid rgba(201,168,76,.6);}
-    .fc-goose{width:38px;height:38px;color:var(--gold);}
-    .fc-tagline{font-family:var(--serif);font-style:italic;font-weight:600;font-size:10.5px;letter-spacing:.01em;color:var(--gold-light);margin-top:11px;}
-    .fc-word{font-family:var(--display);font-weight:500;font-size:20px;letter-spacing:.155em;text-indent:.155em;text-transform:uppercase;color:var(--gold);margin-top:8px;}
-    .fc-rule{width:66px;height:1px;background:var(--gold-dark);margin:6px 0;}
-    .fc-llc{font-family:var(--body);font-weight:600;font-size:7px;letter-spacing:.5em;text-indent:.5em;text-transform:uppercase;color:var(--gold-light);}
-    .fc-foot{position:absolute;left:20px;right:20px;bottom:16px;display:flex;justify-content:space-between;align-items:center;}
-    .fc-loc{font-family:var(--body);font-size:9px;font-weight:500;letter-spacing:.015em;color:var(--gold-light);line-height:1.6;}
-    .fc-cell{position:relative;top:1.5px;font-family:var(--body);font-size:10px;font-weight:600;letter-spacing:.02em;color:var(--gold-light);}
+    .card-front{background:radial-gradient(ellipse 120% 95% at 50% 36%,var(--navy-light) 0%,var(--navy) 55%,#081832 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;padding-bottom:42px;}
+    .card-front::after{content:"";position:absolute;inset:12px;border:1px solid rgba(201,168,76,.6);pointer-events:none;}
+    .fc-goose{width:50px;height:50px;color:var(--gold);}
+    .fc-tagline{font-family:var(--serif);font-style:italic;font-weight:700;font-size:14px;letter-spacing:.015em;color:var(--gold-light);margin-top:8px;text-shadow:0 0.7px 0.6px rgba(4,9,15,0.6);}
+    .fc-word{font-family:var(--display);font-weight:500;font-size:22px;letter-spacing:.115em;text-indent:.115em;text-transform:uppercase;color:var(--gold);margin-top:8px;-webkit-text-stroke:0.35px var(--gold);text-shadow:0 0.8px 0.6px rgba(4,9,15,0.85),0 1.7px 1.6px rgba(4,9,15,0.45),-0.3px -0.4px 0.5px rgba(228,205,140,0.35);}
+    .fc-rule{width:96px;height:1px;background:var(--gold-dark);margin:7px 0 6px;}
+    .fc-llc{font-family:var(--body);font-weight:600;font-size:9px;letter-spacing:.48em;text-indent:.48em;text-transform:uppercase;color:var(--gold-light);}
+    .fc-foot{position:absolute;left:27px;right:27px;bottom:23px;display:flex;justify-content:space-between;align-items:center;}
+    .fc-loc{font-family:var(--body);font-size:9.5px;font-weight:500;letter-spacing:.015em;color:var(--gold-light);line-height:1.55;}
+    .fc-cell{font-family:var(--body);font-size:10.5px;font-weight:600;letter-spacing:.02em;color:var(--gold-light);text-align:right;line-height:1.55;}
+    .fc-cell .web{font-size:10.5px;font-weight:600;}
 
     /* ── BACK ── */
-    .card-back{background:var(--bone);display:flex;border:1px solid rgba(201,168,76,.5);}
+    .card-back{background:var(--bone);display:flex;}
+    .card-back::after{content:"";position:absolute;inset:12px;border:1px solid rgba(201,168,76,.5);pointer-events:none;}
     .back-accent{width:6px;background:linear-gradient(180deg,var(--navy),var(--navy-light));flex-shrink:0;}
-    .back-content{flex:1;padding:15px 18px;display:flex;flex-direction:column;position:relative;}
-    .bk-name{font-family:var(--serif);font-weight:700;font-size:15.5px;color:var(--navy);line-height:1.05;}
+    .back-content{flex:1;padding:17px 26px;display:flex;flex-direction:column;position:relative;}
+    .bk-name{font-family:var(--serif);font-weight:700;font-size:16px;color:var(--navy);line-height:1.05;}
     .bk-name .mid{color:var(--gold-dark);}
-    .bk-title{font-weight:700;font-size:7px;letter-spacing:.18em;text-transform:uppercase;color:var(--navy);margin-top:3px;}
-    .bk-insured{font-weight:700;font-size:7px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-dark);margin-top:2.5px;}
-    .bk-qr{position:absolute;top:14px;right:16px;text-align:center;}
-    .bk-qr svg{width:40px;height:40px;display:block;}
-    .bk-qr span{display:block;font-size:5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-dark);margin-top:2px;}
-    .bk-rule{height:1px;background:var(--gold);margin:7px 50px 0 0;}
-    .bk-label{font-weight:700;font-size:6.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:5px;}
-    .bk-serv{font-weight:600;font-size:9px;color:var(--navy);line-height:1.5;}
+    .bk-aka{font-family:var(--serif);font-style:italic;font-weight:600;font-size:10.5px;color:var(--gold-dark);margin-top:1px;}
+    .bk-title{font-weight:700;font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:var(--navy);margin-top:2px;}
+    .bk-insured{font-weight:700;font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-dark);margin-top:2px;}
+    .bk-qr{position:absolute;top:17px;right:26px;text-align:center;}
+    .bk-qr svg{width:42px;height:42px;display:block;}
+    .bk-qr span{display:block;font-size:5.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-dark);margin-top:2px;}
+    .bk-rule{height:1px;background:var(--gold);margin:4px 52px 0 0;}
+    .bk-label{font-weight:700;font-size:7.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:2px;}
+    .bk-serv{font-weight:600;font-size:11px;color:var(--navy);line-height:1.35;}
     .bk-serv .dot{color:var(--gold-dark);margin:0 3px;}
-    .bk-body{margin-top:9px;}
-    .bk-bottom{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-top:11px;}
-    .bk-cline{display:flex;align-items:center;gap:6px;margin-bottom:3px;}
+    .bk-body{margin-top:4px;}
+    .bk-bottom{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;margin-top:5px;}
+    .bk-cline{display:flex;align-items:center;gap:7px;margin-bottom:3px;}
     .bk-cline:last-child{margin-bottom:0;}
-    .bk-cline svg{width:9px;height:9px;color:var(--gold-dark);flex-shrink:0;}
-    .bk-cline span{font-size:8.5px;color:var(--navy);white-space:nowrap;}
+    .bk-cline svg{width:11px;height:11px;color:var(--gold-dark);flex-shrink:0;}
+    .bk-cline span{font-size:11px;color:var(--navy);white-space:nowrap;}
     .bk-social{text-align:right;}
-    .bk-sline{display:flex;align-items:center;justify-content:flex-end;gap:6px;margin-bottom:3px;}
+    .bk-sline{display:flex;align-items:center;justify-content:flex-end;gap:7px;margin-bottom:3px;}
     .bk-sline:last-child{margin-bottom:0;}
-    .bk-sline.perk span{color:var(--gold-dark);font-style:italic;letter-spacing:.02em;}
-    .bk-sline svg{width:9px;height:9px;color:var(--gold-dark);flex-shrink:0;}
-    .bk-sline span{font-size:8.5px;font-weight:700;color:var(--navy);white-space:nowrap;}
+    .bk-midrow{display:flex;justify-content:space-between;align-items:center;margin-top:8px;}
+    .bk-midrow .bk-label{margin-bottom:0;}
+    .bk-perkline{display:flex;align-items:center;gap:5px;color:var(--gold-dark);}
+    .bk-perkline svg{width:10px;height:10px;}
+    .bk-perkline span{font-size:10px;font-weight:700;font-style:italic;letter-spacing:.02em;color:var(--gold-dark);white-space:nowrap;}
+    .bk-sline svg{width:11px;height:11px;color:var(--gold-dark);flex-shrink:0;}
+    .bk-sline span{font-size:10.5px;font-weight:700;color:var(--navy);white-space:nowrap;}
 
     @media print{
       @page{size:3.75in 2.25in;margin:0;}
@@ -74,7 +81,8 @@
       .card-wrapper{display:flex;align-items:center;justify-content:center;width:3.75in;height:2.25in;margin:0;gap:0;}
       .card-wrapper:first-of-type{break-after:page;page-break-after:always;}
       .card{border-radius:0;box-shadow:none;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
-      .card-front{box-shadow:0 0 0 0.14in var(--ink);}
+      /* full-bleed: extend edge colors 0.14in past the 3.5x2 trim */
+      .card-front{box-shadow:0 0 0 0.14in var(--navy);}
       .card-back{box-shadow:0 0 0 0.14in var(--bone);}
       .back-accent{box-shadow:-0.14in 0 0 0 var(--navy);}
     }
@@ -111,7 +119,7 @@
         <div class="fc-llc">LLC</div>
         <div class="fc-foot">
           <div class="fc-loc">Teton Valley, Idaho<br>Jackson, Wyoming</div>
-          <div class="fc-cell">(208) 671-8686</div>
+          <div class="fc-cell">(208) 671-8686<br><span class="web">hudsontetondev.com</span></div>
         </div>
       </div>
       <span class="card-label">Front</span>
@@ -125,8 +133,8 @@
           <div class="bk-head">
             <div class="bk-head-text">
               <div class="bk-name">Lucien <span class="mid">Hudson</span> Gutierrez</div>
+              <div class="bk-aka">aka &ldquo;Goose&rdquo;</div>
               <div class="bk-title">Owner &amp; Operator</div>
-              <div class="bk-insured">Insured</div>
             </div>
             <div class="bk-qr">
               <svg viewBox="0 0 33 33" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges" aria-label="Scan to visit hudsontetondev.com">
@@ -140,23 +148,25 @@
           <div class="bk-body">
             <div class="bk-rule"></div>
             <div class="bk-label">Services</div>
-            <div class="bk-serv">Painting <span class="dot">&middot;</span> Staining <span class="dot">&middot;</span> Pressure Washing<br>Carpentry <span class="dot">&middot;</span> Roofing <span class="dot">&middot;</span> Home Improvements<br>Handyman <span class="dot">&middot;</span> Web Design &amp; AI Solutions</div>
+            <div class="bk-serv">Painting <span class="dot">&middot;</span> Staining <span class="dot">&middot;</span> Carpentry <span class="dot">&middot;</span> Roofing<br>Handyman <span class="dot">&middot;</span> Home Improvements <span class="dot">&middot;</span> Web Design &amp; AI</div>
           </div>
 
+          <div class="bk-midrow">
+            <div class="bk-label">Contact</div>
+            <div class="bk-perkline">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Insured &middot; Free Estimates</span>
+            </div>
+          </div>
           <div class="bk-bottom">
             <div class="bk-contact">
-              <div class="bk-label">Contact</div>
-              <div class="bk-cline">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.11 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-                <span>(208) 671-8686</span>
-              </div>
               <div class="bk-cline">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                 <span>hudsontetondev@gmail.com</span>
               </div>
               <div class="bk-cline">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
-                <span>hudsontetondev.com</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg>
+                <span>Open Mon&ndash;Sat</span>
               </div>
             </div>
             <div class="bk-social">
@@ -168,14 +178,6 @@
                 <div class="bk-sline">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
                   <span>Hudson Development LLC</span>
-                </div>
-                <div class="bk-sline">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg>
-                  <span>Open Mon&ndash;Sat</span>
-                </div>
-                <div class="bk-sline perk">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                  <span>Free Estimates</span>
                 </div>
               </div>
             </div>
