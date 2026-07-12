@@ -26,11 +26,11 @@
     .card{width:3.5in;height:2in;border-radius:8px;overflow:hidden;box-shadow:0 24px 60px rgba(6,15,31,.5);position:relative;}
 
     /* ── FRONT ── */
-    .card-front{background:radial-gradient(ellipse 120% 95% at 50% 36%,var(--navy-light) 0%,var(--navy) 55%,#081832 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;padding-bottom:42px;}
+    .card-front{background:var(--navy);display:flex;flex-direction:column;align-items:center;justify-content:center;padding-bottom:42px;}
     .card-front::after{content:"";position:absolute;inset:12px;border:1px solid rgba(201,168,76,.6);pointer-events:none;}
     .fc-goose{width:50px;height:50px;color:var(--gold);}
     .fc-tagline{font-family:var(--serif);font-style:italic;font-weight:700;font-size:14px;letter-spacing:.015em;color:var(--gold-light);margin-top:8px;text-shadow:0 0.7px 0.6px rgba(4,9,15,0.6);}
-    .fc-word{font-family:var(--display);font-weight:500;font-size:22px;letter-spacing:.115em;text-indent:.115em;text-transform:uppercase;color:var(--gold);margin-top:8px;-webkit-text-stroke:0.35px var(--gold);text-shadow:0 0.8px 0.6px rgba(4,9,15,0.85),0 1.7px 1.6px rgba(4,9,15,0.45),-0.3px -0.4px 0.5px rgba(228,205,140,0.35);}
+    .fc-word{font-family:var(--display);font-weight:500;font-size:21px;letter-spacing:.145em;text-indent:.145em;text-transform:uppercase;color:var(--gold-light);margin-top:8px;-webkit-text-stroke:0.25px var(--gold-light);text-shadow:0 0.7px 1.3px rgba(4,9,15,0.75),0 1.4px 2.4px rgba(4,9,15,0.45),-0.3px -0.4px 0.4px rgba(232,212,152,0.4);}
     .fc-rule{width:96px;height:1px;background:var(--gold-dark);margin:7px 0 6px;}
     .fc-llc{font-family:var(--body);font-weight:600;font-size:9px;letter-spacing:.48em;text-indent:.48em;text-transform:uppercase;color:var(--gold-light);}
     .fc-foot{position:absolute;left:27px;right:27px;bottom:23px;display:flex;justify-content:space-between;align-items:center;}
@@ -45,7 +45,6 @@
     .back-content{flex:1;padding:17px 26px;display:flex;flex-direction:column;position:relative;}
     .bk-name{font-family:var(--serif);font-weight:700;font-size:16px;color:var(--navy);line-height:1.05;}
     .bk-name .mid{color:var(--gold-dark);}
-    .bk-aka{font-family:var(--serif);font-style:italic;font-weight:600;font-size:10.5px;color:var(--gold-dark);margin-top:1px;}
     .bk-title{font-weight:700;font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:var(--navy);margin-top:2px;}
     .bk-insured{font-weight:700;font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-dark);margin-top:2px;}
     .bk-qr{position:absolute;top:17px;right:26px;text-align:center;}
@@ -56,21 +55,16 @@
     .bk-serv{font-weight:600;font-size:11px;color:var(--navy);line-height:1.35;}
     .bk-serv .dot{color:var(--gold-dark);margin:0 3px;}
     .bk-body{margin-top:4px;}
-    .bk-bottom{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;margin-top:5px;}
+    .bk-bottom{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;margin-top:9px;}
     .bk-cline{display:flex;align-items:center;gap:7px;margin-bottom:3px;}
     .bk-cline:last-child{margin-bottom:0;}
     .bk-cline svg{width:11px;height:11px;color:var(--gold-dark);flex-shrink:0;}
     .bk-cline span{font-size:11px;color:var(--navy);white-space:nowrap;}
-    .bk-social{text-align:right;}
-    .bk-sline{display:flex;align-items:center;justify-content:flex-end;gap:7px;margin-bottom:3px;}
+    .bk-social{display:flex;justify-content:flex-end;}
+    .bk-sline{display:flex;align-items:center;gap:7px;margin-bottom:3px;}
     .bk-sline:last-child{margin-bottom:0;}
-    .bk-midrow{display:flex;justify-content:space-between;align-items:center;margin-top:8px;}
-    .bk-midrow .bk-label{margin-bottom:0;}
-    .bk-perkline{display:flex;align-items:center;gap:5px;color:var(--gold-dark);}
-    .bk-perkline svg{width:10px;height:10px;}
-    .bk-perkline span{font-size:10px;font-weight:700;font-style:italic;letter-spacing:.02em;color:var(--gold-dark);white-space:nowrap;}
     .bk-sline svg{width:11px;height:11px;color:var(--gold-dark);flex-shrink:0;}
-    .bk-sline span{font-size:10.5px;font-weight:700;color:var(--navy);white-space:nowrap;}
+    .bk-sline span{font-size:11px;color:var(--navy);white-space:nowrap;}
 
     @media print{
       @page{size:3.75in 2.25in;margin:0;}
@@ -133,7 +127,6 @@
           <div class="bk-head">
             <div class="bk-head-text">
               <div class="bk-name">Lucien <span class="mid">Hudson</span> Gutierrez</div>
-              <div class="bk-aka">aka &ldquo;Goose&rdquo;</div>
               <div class="bk-title">Owner &amp; Operator</div>
             </div>
             <div class="bk-qr">
@@ -151,33 +144,35 @@
             <div class="bk-serv">Painting <span class="dot">&middot;</span> Staining <span class="dot">&middot;</span> Carpentry <span class="dot">&middot;</span> Roofing<br>Handyman <span class="dot">&middot;</span> Home Improvements <span class="dot">&middot;</span> Web Design &amp; AI</div>
           </div>
 
-          <div class="bk-midrow">
-            <div class="bk-label">Contact</div>
-            <div class="bk-perkline">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Insured &middot; Free Estimates</span>
-            </div>
-          </div>
           <div class="bk-bottom">
             <div class="bk-contact">
+              <div class="bk-label">Contact</div>
               <div class="bk-cline">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                 <span>hudsontetondev@gmail.com</span>
               </div>
               <div class="bk-cline">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg>
-                <span>Open Mon&ndash;Sat</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                <span>Hudson Development LLC</span>
+              </div>
+              <div class="bk-cline">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                <span>@hudsontetondev</span>
               </div>
             </div>
             <div class="bk-social">
               <div class="bk-slines">
                 <div class="bk-sline">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-                  <span>@hudsontetondev</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Free Estimates</span>
                 </div>
                 <div class="bk-sline">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
-                  <span>Hudson Development LLC</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg>
+                  <span>Open Mon&ndash;Sat</span>
+                </div>
+                <div class="bk-sline">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  <span>Insured</span>
                 </div>
               </div>
             </div>
