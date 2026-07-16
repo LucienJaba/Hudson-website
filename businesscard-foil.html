@@ -17,17 +17,13 @@
     *{margin:0;padding:0;box-sizing:border-box;}
     body{font-family:var(--body);background:#cfcfcf;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;padding:42px 20px;color:#333;}
     h1{font-weight:600;font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;color:#555;}
-    .card{width:3.5in;height:2in;position:relative;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;padding-bottom:36px;}
+    .card{width:3.5in;height:2in;position:relative;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;padding-bottom:6px;}
     .card::after{content:"";position:absolute;inset:12px;border:1px solid var(--foil);pointer-events:none;}
-    .fc-goose{width:44px;height:44px;color:var(--foil);}
-    .fc-tagline{font-family:var(--serif);font-style:italic;font-weight:700;font-size:13.5px;letter-spacing:.015em;color:var(--foil);margin-top:6px;}
-    .fc-word{font-family:var(--display);font-weight:500;font-size:21px;letter-spacing:.145em;text-indent:.145em;text-transform:uppercase;color:var(--foil);margin-top:6px;}
-    .fc-rule{width:96px;height:1px;background:var(--foil);margin:5px 0;}
-    .fc-llc{font-weight:600;font-size:9px;letter-spacing:.48em;text-indent:.48em;text-transform:uppercase;color:var(--foil);}
-    .fc-foot{position:absolute;left:27px;right:27px;bottom:20px;display:flex;justify-content:space-between;align-items:center;}
-    .fc-loc{font-size:9.5px;font-weight:500;letter-spacing:.015em;color:var(--foil);line-height:1.45;}
-    .fc-cell{font-size:10.5px;font-weight:600;letter-spacing:.02em;color:var(--foil);text-align:right;line-height:1.45;}
-    .fc-cell .web{font-size:10.5px;font-weight:600;}
+    .fc-goose{width:58px;height:58px;color:var(--foil);}
+    .fc-tagline{font-family:var(--serif);font-style:italic;font-weight:700;font-size:15px;letter-spacing:.015em;color:var(--foil);margin-top:8px;}
+    .fc-word{font-family:var(--display);font-weight:500;font-size:22.5px;letter-spacing:.085em;text-indent:.085em;text-transform:uppercase;color:var(--foil);margin-top:9px;-webkit-text-stroke:0.55px var(--foil);}
+    .fc-rule{width:120px;height:1px;background:var(--foil);margin:8px 0 7px;}
+    .fc-llc{font-weight:600;font-size:10.5px;letter-spacing:.5em;text-indent:.5em;text-transform:uppercase;color:var(--foil);}
     @media print{
       @page{size:3.75in 2.25in;margin:0;}
       html,body{background:#fff;margin:0;padding:0;}
@@ -59,10 +55,6 @@
         <div class="fc-word">Hudson Development</div>
         <div class="fc-rule"></div>
         <div class="fc-llc">LLC</div>
-        <div class="fc-foot">
-          <div class="fc-loc">Teton Valley, Idaho<br>Jackson, Wyoming</div>
-          <div class="fc-cell">(208) 671-8686<br><span class="web">hudsontetondev.com</span></div>
-        </div>
     </div>
   </div>
 </body>
