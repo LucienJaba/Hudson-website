@@ -38,33 +38,31 @@
     .card-back{background:var(--bone);display:flex;}
     .card-back::after{content:"";position:absolute;inset:12px;border:1px solid rgba(201,168,76,.5);pointer-events:none;}
     .back-accent{width:6px;background:linear-gradient(180deg,var(--navy),var(--navy-light));flex-shrink:0;}
-    .back-content{flex:1;padding:17px 26px;display:flex;flex-direction:column;position:relative;}
+    .back-content{flex:1;padding:16px 24px;display:flex;flex-direction:column;justify-content:center;position:relative;}
+    .bk-head{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;}
     .bk-name{font-family:var(--display);font-weight:600;font-size:17px;letter-spacing:.04em;color:var(--navy);line-height:1.05;-webkit-text-stroke:0.45px var(--navy);}
     .bk-name .mid{color:var(--gold-dark);-webkit-text-stroke:0.45px var(--gold-dark);}
     .bk-title{font-weight:700;font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:var(--navy);margin-top:3.5px;}
     .bk-title .tsep{color:var(--gold-dark);}
     .bk-insured{font-weight:700;font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-dark);margin-top:2px;}
-    .bk-qr{position:absolute;top:17px;right:26px;text-align:center;}
+    .bk-qr{text-align:center;flex-shrink:0;}
     .bk-qr svg{width:42px;height:42px;display:block;}
     .bk-qr span{display:block;font-size:6px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-dark);margin-top:2.5px;}
     .bk-rule{height:1px;background:var(--gold);margin:4px 52px 0 0;}
     .bk-label{font-weight:700;font-size:7.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:2px;}
-    .bk-serv{font-weight:600;font-size:11px;color:var(--navy);line-height:1.35;}
+    .bk-serv{font-weight:600;font-size:11px;color:var(--navy);line-height:1.3;}
     .bk-serv .dot{color:var(--gold-dark);margin:0 3px;}
-    .bk-body{margin-top:4px;}
-    .bk-bottom{display:flex;justify-content:space-between;align-items:flex-end;gap:10px;margin-top:9px;}
-    .bk-cline{display:flex;align-items:center;gap:7px;margin-bottom:3px;}
+    .bk-body{margin-top:3px;}
+    .bk-bottom{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;margin-top:8px;}
+    .bk-cline{display:flex;align-items:center;gap:6px;margin-bottom:3px;}
     .bk-cline:last-child{margin-bottom:0;}
-    .bk-cline svg{width:10.5px;height:10.5px;color:var(--gold-dark);flex-shrink:0;}
-    .bk-cline span{font-size:10px;color:var(--navy);white-space:nowrap;}
-    .bk-social{display:flex;justify-content:flex-end;}
-    .bk-sline{display:flex;align-items:center;gap:7px;margin-bottom:3px;}
+    .bk-cline svg{width:9.5px;height:9.5px;color:var(--gold-dark);flex-shrink:0;}
+    .bk-cline span{font-size:9px;color:var(--navy);white-space:nowrap;}
+    .bk-social{display:flex;justify-content:flex-end;margin-top:14px;}
+    .bk-sline{display:flex;align-items:center;gap:6px;margin-bottom:3px;}
     .bk-sline:last-child{margin-bottom:0;}
-    .bk-sline svg{width:10.5px;height:10.5px;color:var(--gold-dark);flex-shrink:0;}
-    .bk-sline span{font-size:10px;color:var(--navy);white-space:nowrap;}
-    .bk-loc{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:8px;}
-    .bk-loc svg{width:10px;height:10px;color:var(--gold-dark);flex-shrink:0;}
-    .bk-loc span{font-size:9.5px;font-weight:500;letter-spacing:.02em;color:var(--navy);white-space:nowrap;}
+    .bk-sline svg{width:9.5px;height:9.5px;color:var(--gold-dark);flex-shrink:0;}
+    .bk-sline span{font-size:9px;color:var(--navy);white-space:nowrap;}
 
     @media print{
       @page{size:3.75in 2.25in;margin:0;}
@@ -165,12 +163,12 @@
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
                   <span>hudsontetondev.com</span>
                 </div>
+                <div class="bk-sline">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  <span>Teton Valley, ID &middot; Jackson, WY</span>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="bk-loc">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Teton Valley, ID &middot; Jackson, WY</span>
           </div>
 
         </div>
