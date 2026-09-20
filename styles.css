@@ -525,8 +525,8 @@ h1, h2, h3, h4 {
 /* Single wide pillar card */
 .service-card--wide {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 44px;
+  grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr);
+  gap: 40px;
   align-items: center;
   padding: 44px 48px;
 }

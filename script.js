@@ -208,18 +208,23 @@ document.addEventListener('DOMContentLoaded', () => {
   const chatFAQ = {
     services: {
       label: 'What services do you offer?',
-      reply: `We're a full-service contractor — general contracting and carpentry, roofing, interior and exterior painting, deck staining, waterproofing, and pressure washing. Want details on any of it?`,
-      next: ['painting', 'roofing', 'property', 'estimate']
+      reply: `We're a full-service contractor — <strong>new construction</strong>, general contracting and carpentry, roofing, <strong>storm and insurance restoration</strong>, interior and exterior painting for commercial and residential, deck staining, waterproofing, and pressure washing. Want details on any of it?`,
+      next: ['painting', 'roofing', 'construction', 'storm', 'property', 'estimate']
     },
     painting: {
       label: 'Painting',
-      reply: `Painting is in our blood — 12+ years of it. Premium interior and exterior work with expert color consultation, built to handle Teton Valley's UV and freeze-thaw. Want a free estimate?`,
+      reply: `Painting is in our blood — 12+ years of it. Premium interior and exterior work for <strong>commercial and residential</strong> properties, with expert color consultation, built to handle Teton Valley's UV and freeze-thaw. Want a free estimate?`,
       next: ['estimate', 'area', 'services']
     },
     roofing: {
       label: 'Roofing',
-      reply: `Full roof replacements built for heavy snow loads. Want me to set up a free estimate?`,
-      next: ['estimate', 'area', 'services']
+      reply: `Full roof replacements built for heavy snow loads — plus <strong>storm restoration and insurance work</strong> for wind and hail damage. We deal with the carrier so you don't have to. Want me to set up a free estimate?`,
+      next: ['storm', 'estimate', 'area', 'services']
+    },
+    construction: {
+      label: 'New construction',
+      reply: `Yes — we take on <strong>new construction</strong> from the ground up, along with additions and full remodels. Four generations of builders behind every job. Want to talk through your project?`,
+      next: ['estimate', 'contact', 'services']
     },
     security: {
       label: 'Security cameras',
@@ -250,7 +255,7 @@ document.addEventListener('DOMContentLoaded', () => {
     storm: {
       label: 'Storm repair',
       reply: `We're <strong>hail and wind damage specialists</strong>. We handle insurance claims end-to-end and can usually get a free roof inspection scheduled within 48 hours. Want me to set one up?`,
-      next: ['estimate', 'services']
+      next: ['estimate', 'roofing', 'services']
     },
     property: {
       label: 'Property management',
@@ -259,7 +264,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     contact: {
       label: 'Contact info',
-      reply: `Reach us anytime:<br>Phone: <a href="tel:+12086718686">(208) 671-8686</a><br>Email: <a href="mailto:hudsontetondev@gmail.com">hudsontetondev@gmail.com</a><br>Instagram: <a href="https://www.instagram.com/hudsontetondev" target="_blank" rel="noopener">@hudsontetondev</a>`,
+      reply: `Reach us anytime:<br>Phone: <a href="tel:+12086718686">(208) 671-8686</a><br>Email: <a href="mailto:lucien@hudsontetondev.com">lucien@hudsontetondev.com</a><br>Instagram: <a href="https://www.instagram.com/hudsontetondev" target="_blank" rel="noopener">@hudsontetondev</a>`,
       next: ['estimate', 'services']
     },
     insured: {
@@ -274,7 +279,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let chatStarted = false;
 
   const leadState = { step: 'idle', data: { name: '', contact: '', service: '', time: '' } };
-  const SERVICE_OPTIONS = ['Roofing', 'Painting', 'Property Mgmt', 'General Contracting', 'Other'];
+  const SERVICE_OPTIONS = ['Roofing', 'Storm / Insurance', 'Painting', 'New Construction', 'Property Mgmt', 'General Contracting', 'Other'];
   const TIME_OPTIONS = ['Morning', 'Midday', 'Afternoon', 'Evening'];
 
   function appendMessage(text, sender) {
@@ -419,7 +424,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const subject = `New Lead from Chatbot — ${d.name}`;
       const body =
         `New chatbot lead:\n\nName: ${d.name}\nContact: ${d.contact}\nService: ${d.service}\nBest callback time: ${d.time}\n\nSubmitted from hudsontetondev.com chatbot.`;
-      const mailto = `mailto:hudsontetondev@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      const mailto = `mailto:lucien@hudsontetondev.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
       window.__lastLeadMailto = mailto;
 
       chatQuickReplies.innerHTML = '';
@@ -449,7 +454,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (chatStarted) return;
     chatStarted = true;
     setTimeout(() => {
-      appendMessage(`Hi, I'm <strong>Hudson the Goose</strong> &mdash; <em>the goose is loose!</em> I can tell you about our trades, property management, or get a free estimate started. What can I help with?`, 'bot');
+      appendMessage(`Hi, I'm <strong>Hudson the Goose</strong> &mdash; <em>the goose is loose!</em> I can tell you about our trades, storm and insurance work, new construction, property management, or get a free estimate started. What can I help with?`, 'bot');
       renderQuickReplies(defaultQuickReplies);
     }, 250);
   }
