@@ -446,7 +446,7 @@ h1, h2, h3, h4 {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 22px;
 }
 /* Pillar card service list */
@@ -471,10 +471,6 @@ h1, h2, h3, h4 {
   border-radius: 50%;
   background: var(--gold-dark);
 }
-.service-card--link .service-list { border-top-color: rgba(244,241,233,0.15); }
-.service-card--link .service-list li { color: rgba(244,241,233,0.72); }
-.service-card--link .service-list li::before { background: var(--gold); }
-
 .service-card {
   background: var(--white);
   padding: 38px 28px 34px;
@@ -497,16 +493,6 @@ h1, h2, h3, h4 {
   border-color: rgba(201, 168, 76, 0.3);
 }
 .service-card:hover::before { width: 100%; }
-
-.service-num {
-  position: absolute;
-  top: 22px; right: 24px;
-  font-family: var(--display);
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: rgba(11,29,58,0.14);
-  letter-spacing: 0.04em;
-}
 
 .service-icon {
   width: 64px; height: 64px;
@@ -535,6 +521,28 @@ h1, h2, h3, h4 {
 }
 .service-card p { font-size: 0.92rem; color: var(--gray-deep); line-height: 1.6; }
 .service-card p strong { color: var(--navy); font-weight: 600; }
+
+/* Single wide pillar card */
+.service-card--wide {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 44px;
+  align-items: center;
+  padding: 44px 48px;
+}
+.service-card--wide:hover { transform: translateY(-4px); }
+.service-card--wide .service-icon { margin-bottom: 24px; }
+.service-card--wide h3 { font-size: 1.5rem; }
+.service-card--wide p { font-size: 0.98rem; max-width: 44ch; }
+.service-card--wide .service-list {
+  columns: 2;
+  column-gap: 32px;
+  margin: 0;
+  padding: 2px 0 2px 44px;
+  border-top: 0;
+  border-left: 1px solid rgba(11,29,58,0.09);
+}
+.service-card--wide .service-list li { break-inside: avoid; font-size: 0.95rem; }
 
 .inline-link { color: var(--gold-dark); font-weight: 600; white-space: nowrap; }
 .inline-link:hover { color: var(--gold); }
@@ -807,7 +815,9 @@ a.contact-card:hover .contact-value { color: var(--gold-dark); }
    Responsive
    ======================================== */
 @media (max-width: 1024px) {
-  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .service-card--wide { grid-template-columns: 1fr; gap: 32px; padding: 42px 38px; }
+  .service-card--wide .service-list { border-left: 0; border-top: 1px solid rgba(11,29,58,0.09); padding: 22px 0 0; }
+  .service-card--wide p { max-width: none; }
   .process-grid { grid-template-columns: repeat(2, 1fr); }
   .concierge-wrapper { grid-template-columns: 1fr; gap: 48px; }
   .concierge-visual { order: -1; }
@@ -836,7 +846,9 @@ a.contact-card:hover .contact-value { color: var(--gold-dark); }
 
   .section-title { font-size: clamp(1.9rem, 7vw, 2.6rem); }
   .services, .concierge, .story, .process, .contact { padding: 84px 0; }
-  .services-grid { grid-template-columns: 1fr; gap: 16px; }
+  .service-card--wide { padding: 34px 26px; gap: 26px; }
+  .service-card--wide .service-list { columns: 1; }
+  .service-card--wide h3 { font-size: 1.3rem; }
   .process-grid { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; gap: 36px; }
   .contact-form { padding: 30px; }
