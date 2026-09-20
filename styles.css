@@ -539,148 +539,6 @@ h1, h2, h3, h4 {
 .inline-link { color: var(--gold-dark); font-weight: 600; white-space: nowrap; }
 .inline-link:hover { color: var(--gold); }
 
-.service-card--link { background: linear-gradient(160deg, #0B1D3A 0%, #122B52 100%); border-color: transparent; }
-.service-card--link .service-num { color: rgba(255,255,255,0.18); }
-.service-card--link .service-icon { background: rgba(201,168,76,0.14); color: var(--gold); }
-.service-card--link h3 { color: var(--white); }
-.service-card--link p { color: rgba(244,241,233,0.65); }
-.service-card--link p strong { color: var(--white); }
-.service-card--link:hover .service-icon { background: var(--gold); color: var(--navy); }
-
-/* ========================================
-   Web / AI / Automation
-   ======================================== */
-.digital {
-  padding: 120px 0;
-  background: radial-gradient(120% 100% at 80% 0%, #122B52 0%, #0B1D3A 50%, #060F1F 100%);
-  position: relative;
-  overflow: hidden;
-}
-.digital-topo {
-  position: absolute; inset: 0;
-  color: var(--gold);
-  opacity: 0.10;
-  pointer-events: none;
-}
-.digital-topo svg { width: 100%; height: 100%; }
-
-.digital-wrap {
-  position: relative; z-index: 2;
-  display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: 70px;
-  align-items: center;
-}
-
-.digital-lead {
-  font-size: 1.12rem;
-  color: rgba(244,241,233,0.72);
-  line-height: 1.8;
-  margin: 22px 0 32px;
-  max-width: 540px;
-}
-
-.digital-list { list-style: none; display: flex; flex-direction: column; gap: 22px; margin-bottom: 38px; }
-.digital-list li { display: flex; gap: 16px; align-items: flex-start; }
-.digital-li-icon {
-  width: 42px; height: 42px; flex-shrink: 0;
-  border-radius: 10px;
-  border: 1px solid rgba(201,168,76,0.3);
-  background: rgba(201,168,76,0.08);
-  color: var(--gold);
-  display: flex; align-items: center; justify-content: center;
-  padding: 9px;
-}
-.digital-li-icon svg { width: 100%; height: 100%; }
-.digital-list strong { display: block; color: var(--white); font-size: 1.02rem; font-weight: 600; margin-bottom: 3px; }
-.digital-list span { display: block; color: rgba(244,241,233,0.6); font-size: 0.92rem; line-height: 1.55; }
-
-/* terminal mock */
-.digital-visual { display: flex; flex-direction: column; align-items: center; gap: 22px; }
-.terminal-card {
-  width: 100%;
-  max-width: 420px;
-  background: rgba(4, 9, 15, 0.7);
-  border: 1px solid rgba(201,168,76,0.22);
-  border-radius: 12px;
-  box-shadow: 0 30px 70px rgba(0,0,0,0.45);
-  overflow: hidden;
-  backdrop-filter: blur(6px);
-}
-.terminal-bar {
-  display: flex; align-items: center; gap: 8px;
-  padding: 13px 16px;
-  background: rgba(255,255,255,0.04);
-  border-bottom: 1px solid rgba(201,168,76,0.14);
-}
-/* Portfolio card — real client site proof */
-.portfolio-card {
-  display: block; width: 100%; max-width: 420px;
-  background: rgba(4, 9, 15, 0.7);
-  border: 1px solid rgba(201,168,76,0.22);
-  border-radius: 12px; overflow: hidden;
-  box-shadow: 0 30px 70px rgba(0,0,0,0.45);
-  backdrop-filter: blur(6px);
-  text-decoration: none; position: relative;
-  transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease;
-}
-.portfolio-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(201,168,76,0.55);
-  box-shadow: 0 38px 80px rgba(0,0,0,0.55);
-}
-.portfolio-badge {
-  position: absolute; top: 12px; left: 12px; z-index: 2;
-  font-family: var(--body); font-size: 0.68rem; font-weight: 600;
-  letter-spacing: 0.08em; text-transform: uppercase;
-  color: var(--ink); background: var(--gold);
-  padding: 5px 10px; border-radius: 999px;
-}
-.portfolio-shot { display: block; overflow: hidden; }
-.portfolio-shot img {
-  display: block; width: 100%; height: auto;
-  border-bottom: 1px solid rgba(201,168,76,0.18);
-  transition: transform .5s ease;
-}
-.portfolio-card:hover .portfolio-shot img { transform: scale(1.03); }
-.portfolio-meta {
-  display: flex; align-items: center; justify-content: space-between;
-  gap: 12px; padding: 14px 16px;
-}
-.portfolio-name {
-  font-family: var(--display); font-size: 1.02rem; color: var(--bone);
-  line-height: 1.25;
-}
-.portfolio-link {
-  font-family: var(--body); font-size: 0.82rem; font-weight: 600;
-  color: var(--gold); white-space: nowrap;
-  transition: transform .3s ease; display: inline-block;
-}
-.portfolio-card:hover .portfolio-link { transform: translateX(3px); }
-
-.term-dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(244,241,233,0.25); }
-.term-dot:nth-child(1) { background: #E25C5C; }
-.term-dot:nth-child(2) { background: #E2C878; }
-.term-dot:nth-child(3) { background: #5CC98A; }
-.term-title {
-  margin-left: 8px;
-  font-family: var(--body);
-  font-size: 0.72rem;
-  letter-spacing: 0.06em;
-  color: rgba(244,241,233,0.45);
-}
-.terminal-body { padding: 22px 20px; font-family: 'SF Mono', ui-monospace, Menlo, monospace; }
-.term-line {
-  font-size: 0.86rem;
-  color: rgba(244,241,233,0.78);
-  padding: 7px 0;
-  display: flex; align-items: center; gap: 10px;
-}
-.term-prompt { color: var(--gold); }
-.term-ok { color: #5CC98A; margin-left: auto; }
-.term-typing { color: var(--gold); margin-left: auto; animation: blink 1s steps(1) infinite; }
-@keyframes blink { 50% { opacity: 0; } }
-
 /* ========================================
    Concierge / Property Management
    ======================================== */
@@ -953,7 +811,6 @@ a.contact-card:hover .contact-value { color: var(--gold-dark); }
   .process-grid { grid-template-columns: repeat(2, 1fr); }
   .concierge-wrapper { grid-template-columns: 1fr; gap: 48px; }
   .concierge-visual { order: -1; }
-  .digital-wrap { grid-template-columns: 1fr; gap: 44px; }
   .story-wrap { grid-template-columns: 1fr; gap: 40px; }
   .story-aside .section-title, .concierge-text .section-title { text-align: left; }
 }
@@ -978,7 +835,7 @@ a.contact-card:hover .contact-value { color: var(--gold-dark); }
   .trust-stat:nth-child(2)::after { display: none; }
 
   .section-title { font-size: clamp(1.9rem, 7vw, 2.6rem); }
-  .services, .digital, .concierge, .story, .process, .contact { padding: 84px 0; }
+  .services, .concierge, .story, .process, .contact { padding: 84px 0; }
   .services-grid { grid-template-columns: 1fr; gap: 16px; }
   .process-grid { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; gap: 36px; }
@@ -1359,23 +1216,6 @@ a.contact-card:hover .contact-value { color: var(--gold-dark); }
   .lightbox-prev { left: 10px; } .lightbox-next { right: 10px; }
   .lightbox-btn { width: 42px; height: 42px; }
 }
-
-/* ---- Portfolio Links ---- */
-.portfolio-links {
-  margin-top: 16px;
-  padding-top: 14px;
-  border-top: 1px solid rgba(11,29,58,0.08);
-}
-.portfolio-heading {
-  font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em;
-  text-transform: uppercase; color: var(--gray); margin-bottom: 8px;
-}
-.portfolio-link-item {
-  display: block; font-size: 0.92rem; font-weight: 500;
-  color: var(--navy); text-decoration: none;
-  padding: 4px 0; transition: color 0.2s var(--ease);
-}
-.portfolio-link-item:hover { color: var(--gold-dark); }
 
 /* ---- Sticky Call Button (mobile only) ---- */
 .sticky-call {

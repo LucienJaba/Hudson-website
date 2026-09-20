@@ -208,8 +208,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const chatFAQ = {
     services: {
       label: 'What services do you offer?',
-      reply: `We're a full-service contractor — general contracting and carpentry, roofing, interior and exterior painting, deck staining, waterproofing, and pressure washing. We also build <strong>websites and AI solutions</strong> for local businesses. Want details on any of it?`,
-      next: ['painting', 'roofing', 'digital', 'property', 'estimate']
+      reply: `We're a full-service contractor — general contracting and carpentry, roofing, interior and exterior painting, deck staining, waterproofing, and pressure washing. Want details on any of it?`,
+      next: ['painting', 'roofing', 'property', 'estimate']
     },
     painting: {
       label: 'Painting',
@@ -220,11 +220,6 @@ document.addEventListener('DOMContentLoaded', () => {
       label: 'Roofing',
       reply: `Full roof replacements built for heavy snow loads. Want me to set up a free estimate?`,
       next: ['estimate', 'area', 'services']
-    },
-    digital: {
-      label: 'Websites & AI',
-      reply: `Yep — same builder, modern toolset. We make fast websites, set up <strong>AI assistants</strong> (like me!), and automate the busywork for local businesses — scheduling, follow-ups, reviews, invoicing. Want to talk about your business?`,
-      next: ['estimate', 'contact', 'services']
     },
     security: {
       label: 'Security cameras',
@@ -239,7 +234,7 @@ document.addEventListener('DOMContentLoaded', () => {
     story: {
       label: 'Who is Hudson?',
       reply: `Hudson Development is a <strong>fourth-generation builder</strong> — great-grandfather, grandfather, and stepfather all built before me. "Hudson" is the family middle name, and "Goose" is the nickname my grandfather gave me. New to the valley, not new to the work.`,
-      next: ['services', 'digital', 'estimate']
+      next: ['services', 'estimate']
     },
     pricing: {
       label: 'How much does it cost?',
@@ -274,12 +269,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  const defaultQuickReplies = ['services', 'estimate', 'digital', 'story', 'storm'];
+  const defaultQuickReplies = ['services', 'estimate', 'story', 'storm'];
 
   let chatStarted = false;
 
   const leadState = { step: 'idle', data: { name: '', contact: '', service: '', time: '' } };
-  const SERVICE_OPTIONS = ['Roofing', 'Painting', 'Property Mgmt', 'Website / AI Solutions', 'General Contracting', 'Other'];
+  const SERVICE_OPTIONS = ['Roofing', 'Painting', 'Property Mgmt', 'General Contracting', 'Other'];
   const TIME_OPTIONS = ['Morning', 'Midday', 'Afternoon', 'Evening'];
 
   function appendMessage(text, sender) {
@@ -454,7 +449,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (chatStarted) return;
     chatStarted = true;
     setTimeout(() => {
-      appendMessage(`Hi, I'm <strong>Hudson the Goose</strong> &mdash; <em>the goose is loose!</em> I can tell you about our trades, websites &amp; AI work, property management, or get a free estimate started. What can I help with?`, 'bot');
+      appendMessage(`Hi, I'm <strong>Hudson the Goose</strong> &mdash; <em>the goose is loose!</em> I can tell you about our trades, property management, or get a free estimate started. What can I help with?`, 'bot');
       renderQuickReplies(defaultQuickReplies);
     }, 250);
   }
