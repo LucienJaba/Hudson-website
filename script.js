@@ -208,32 +208,27 @@ document.addEventListener('DOMContentLoaded', () => {
   const chatFAQ = {
     services: {
       label: 'What services do you offer?',
-      reply: `We're a full-service contractor — roofing, <strong>storm and hail damage repair</strong>, <strong>renovations and additions</strong>, carpentry, interior and exterior painting for commercial and residential, deck staining, waterproofing, and pressure washing. Want details on any of it?`,
-      next: ['painting', 'roofing', 'construction', 'storm', 'property', 'estimate']
+      reply: `We do interior and exterior <strong>painting</strong>, <strong>roofing</strong>, <strong>storm and hail damage repair</strong>, <strong>renovations and additions</strong>, carpentry and decks, wood staining, and pressure washing. Want details on any of it?`,
+      next: ['painting', 'roofing', 'construction', 'storm', 'estimate']
     },
     painting: {
       label: 'Painting',
-      reply: `Painting is in our blood — 12+ years of it. Premium interior and exterior work for <strong>commercial and residential</strong> properties, with expert color consultation, built to handle Teton Valley's UV and freeze-thaw. Want a free estimate?`,
+      reply: `Interior and exterior painting for homes and commercial buildings, with help choosing colors if you want it. Our exterior work is prepped and finished to hold up to Teton Valley sun and freeze-thaw. Want a free estimate?`,
       next: ['estimate', 'area', 'services']
     },
     roofing: {
       label: 'Roofing',
-      reply: `Full roof replacements built for heavy snow loads — plus <strong>storm restoration and insurance work</strong> for wind and hail damage. We deal with the carrier so you don't have to. Want me to set up a free estimate?`,
+      reply: `Full roof replacements built for heavy snow loads, plus <strong>wind and hail damage repair</strong>. If insurance is involved, we work with your carrier for you. Want me to set up a free estimate?`,
       next: ['storm', 'estimate', 'area', 'services']
     },
     construction: {
       label: 'Renovations & additions',
-      reply: `Yes — we take on <strong>full renovations and additions</strong>, from a single room to a whole-house remodel. Want to talk through your project?`,
+      reply: `Yes, we take on <strong>full renovations and additions</strong>, from a single room to a whole-house remodel. Want to talk through your project?`,
       next: ['estimate', 'contact', 'services']
-    },
-    security: {
-      label: 'Security cameras',
-      reply: `We install, sync, and troubleshoot Ring, Nest, Arlo, and Blink systems — with ongoing support if the tech side isn't your thing.`,
-      next: ['estimate', 'services']
     },
     area: {
       label: 'Where do you work?',
-      reply: `Teton Valley, Idaho and Jackson, Wyoming — Driggs, Victor, Tetonia, and the surrounding areas. Not sure if you're in range? Just ask.`,
+      reply: `Teton Valley, Idaho and Jackson, Wyoming: Driggs, Victor, Tetonia, and the surrounding areas. Not sure if you're in range? Just ask.`,
       next: ['estimate', 'services']
     },
     story: {
@@ -257,11 +252,6 @@ document.addEventListener('DOMContentLoaded', () => {
       reply: `We're <strong>hail and wind damage specialists</strong>. We handle insurance claims end-to-end and can usually get a free roof inspection scheduled within 48 hours. Want me to set one up?`,
       next: ['estimate', 'roofing', 'services']
     },
-    property: {
-      label: 'Property management',
-      reply: `We manage vacation homes, rentals, and second homes across Teton Valley and Jackson — single point of contact, vendor coordination, emergency response. Want to talk about your property?`,
-      next: ['estimate', 'contact']
-    },
     contact: {
       label: 'Contact info',
       reply: `Reach us anytime:<br>Phone: <a href="tel:+12086718686">(208) 671-8686</a><br>Email: <a href="mailto:lucien@hudsontetondev.com">lucien@hudsontetondev.com</a><br>Instagram: <a href="https://www.instagram.com/hudsontetondev" target="_blank" rel="noopener">@hudsontetondev</a>`,
@@ -279,7 +269,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let chatStarted = false;
 
   const leadState = { step: 'idle', data: { name: '', contact: '', service: '', time: '' } };
-  const SERVICE_OPTIONS = ['Roofing', 'Storm / Insurance', 'Painting', 'Renovations', 'Property Mgmt', 'General Contracting', 'Other'];
+  const SERVICE_OPTIONS = ['Roofing', 'Storm / Insurance', 'Painting', 'Renovations', 'Carpentry & Decks', 'Other'];
   const TIME_OPTIONS = ['Morning', 'Midday', 'Afternoon', 'Evening'];
 
   function appendMessage(text, sender) {
@@ -454,7 +444,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (chatStarted) return;
     chatStarted = true;
     setTimeout(() => {
-      appendMessage(`Hi, I'm <strong>Hudson the Goose</strong> &mdash; <em>the goose is loose!</em> I can tell you about our trades, storm and insurance work, renovations and additions, property management, or get a free estimate started. What can I help with?`, 'bot');
+      appendMessage(`Hi, I'm <strong>Hudson the Goose</strong> &mdash; <em>the goose is loose!</em> I can tell you about our trades, storm and hail repair, renovations and additions, or get a free estimate started. What can I help with?`, 'bot');
       renderQuickReplies(defaultQuickReplies);
     }, 250);
   }
