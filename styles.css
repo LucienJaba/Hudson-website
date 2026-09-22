@@ -1040,6 +1040,7 @@ a.contact-card:hover .contact-value { color: var(--gold-dark); }
   transition: opacity 0.4s var(--ease);
 }
 .work-tile--top img { object-position: center 20%; }
+.work-tile--bottom img { object-position: center 78%; }
 .work-tile:hover img { transform: scale(1.06); }
 .work-tile:hover::after { opacity: 1; }
 .work-tag {
