@@ -552,23 +552,19 @@ h1, h2, h3, h4 {
 }
 .service-card--feature::before { width: 100%; height: 4px; }
 .service-card--feature .service-icon { background: var(--navy); color: var(--gold); }
-/* Row-wise grid keeps related services side by side (painting/staining left, roofing/storm right) */
+/* Two columns of three, filled top to bottom: finishes on the left, roofing and building on the right */
 .service-card--feature .service-list {
   columns: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, auto);
+  grid-auto-flow: column;
   column-gap: 32px;
   row-gap: 4px;
   align-content: center;
 }
-/* Source order is Painting, Staining, Roofing, Storm... (read top to bottom on phones);
-   in two columns, swap Staining and Roofing so each pair stays in its own column */
-.service-card--feature .service-list li:nth-child(2) { order: 3; }
-.service-card--feature .service-list li:nth-child(3) { order: 2; }
-.service-card--feature .service-list li:nth-child(n+4) { order: 4; }
 @media (max-width: 560px) {
-  .service-card--feature .service-list { grid-template-columns: 1fr; }
-  .service-card--feature .service-list li { order: 0 !important; }
+  .service-card--feature .service-list { grid-template-columns: 1fr; grid-template-rows: none; grid-auto-flow: row; }
 }
 .service-card--feature .service-list li {
   padding: 9px 0 9px 30px;
