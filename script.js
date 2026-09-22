@@ -208,7 +208,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const chatFAQ = {
     services: {
       label: 'What services do you offer?',
-      reply: `We're a full-service contractor — <strong>new construction</strong>, general contracting and carpentry, roofing, <strong>storm and insurance restoration</strong>, interior and exterior painting for commercial and residential, deck staining, waterproofing, and pressure washing. Want details on any of it?`,
+      reply: `We're a full-service contractor — roofing, <strong>storm and hail damage repair</strong>, <strong>renovations and additions</strong>, carpentry, interior and exterior painting for commercial and residential, deck staining, waterproofing, and pressure washing. Want details on any of it?`,
       next: ['painting', 'roofing', 'construction', 'storm', 'property', 'estimate']
     },
     painting: {
@@ -222,8 +222,8 @@ document.addEventListener('DOMContentLoaded', () => {
       next: ['storm', 'estimate', 'area', 'services']
     },
     construction: {
-      label: 'New construction',
-      reply: `Yes — we take on <strong>new construction</strong> from the ground up, along with additions and full remodels. Four generations of builders behind every job. Want to talk through your project?`,
+      label: 'Renovations & additions',
+      reply: `Yes — we take on <strong>full renovations and additions</strong>, from a single room to a whole-house remodel. Want to talk through your project?`,
       next: ['estimate', 'contact', 'services']
     },
     security: {
@@ -238,7 +238,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     story: {
       label: 'Who is Hudson?',
-      reply: `Hudson Development is a <strong>fourth-generation builder</strong> — great-grandfather, grandfather, and stepfather all built before me. "Hudson" is the family middle name, and "Goose" is the nickname my grandfather gave me. New to the valley, not new to the work.`,
+      reply: `I come from a <strong>family of builders</strong>: my great-grandfather was a developer, my grandfather was a builder, and I grew up working for my dad. I've spent 25+ years in the trades since. "Hudson" is the family middle name, and "Goose" is the nickname my grandfather gave me. New to the valley, not new to the work.`,
       next: ['services', 'estimate']
     },
     pricing: {
@@ -279,7 +279,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let chatStarted = false;
 
   const leadState = { step: 'idle', data: { name: '', contact: '', service: '', time: '' } };
-  const SERVICE_OPTIONS = ['Roofing', 'Storm / Insurance', 'Painting', 'New Construction', 'Property Mgmt', 'General Contracting', 'Other'];
+  const SERVICE_OPTIONS = ['Roofing', 'Storm / Insurance', 'Painting', 'Renovations', 'Property Mgmt', 'General Contracting', 'Other'];
   const TIME_OPTIONS = ['Morning', 'Midday', 'Afternoon', 'Evening'];
 
   function appendMessage(text, sender) {
@@ -454,7 +454,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (chatStarted) return;
     chatStarted = true;
     setTimeout(() => {
-      appendMessage(`Hi, I'm <strong>Hudson the Goose</strong> &mdash; <em>the goose is loose!</em> I can tell you about our trades, storm and insurance work, new construction, property management, or get a free estimate started. What can I help with?`, 'bot');
+      appendMessage(`Hi, I'm <strong>Hudson the Goose</strong> &mdash; <em>the goose is loose!</em> I can tell you about our trades, storm and insurance work, renovations and additions, property management, or get a free estimate started. What can I help with?`, 'bot');
       renderQuickReplies(defaultQuickReplies);
     }, 250);
   }
