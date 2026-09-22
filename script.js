@@ -228,7 +228,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     area: {
       label: 'Where do you work?',
-      reply: `Teton Valley, Idaho and Jackson, Wyoming: Driggs, Victor, Tetonia, and the surrounding areas. Not sure if you're in range? Just ask.`,
+      reply: `Teton Valley, Idaho and Jackson, Wyoming: Victor, Driggs, Tetonia, Felt, Jackson, and Wilson. Not sure if you're in range? Just ask.`,
       next: ['estimate', 'services']
     },
     story: {
@@ -259,7 +259,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     insured: {
       label: 'Are you insured?',
-      reply: `Yes — fully licensed and insured. We can share documentation on request.`,
+      reply: `Yes, we're fully insured. We can share proof of insurance on request.`,
       next: ['estimate', 'services']
     }
   };
