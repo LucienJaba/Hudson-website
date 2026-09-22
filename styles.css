@@ -339,7 +339,7 @@ h1, h2, h3, h4 {
 }
 .hero-title em { font-style: italic; font-weight: 400; color: var(--bone); }
 
-.hero-subtitle {
+.hero-subtitle { text-wrap: balance;
   font-size: 1.18rem;
   color: rgba(244, 241, 233, 0.72);
   max-width: 560px;
