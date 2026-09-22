@@ -1,6 +1,6 @@
 # Hudson Development LLC
 
-> Home improvement contractor serving Teton Valley, Idaho (Driggs, Victor, Tetonia, Felt) and Jackson Hole, Wyoming. Owner-operated by Lucien Hudson Gutierrez, 25+ years in the trades. Licensed and insured. Free estimates. Open Monday through Saturday.
+> Home improvement contractor based in Victor, Idaho, serving Teton Valley, Idaho (Driggs, Victor, Tetonia, Felt) and Jackson Hole, Wyoming. Owner-operated by Lucien Hudson Gutierrez, 25+ years in the trades. Licensed and insured. Free estimates. Open Monday through Saturday.
 
 ## Services
 - Interior and exterior painting, residential and commercial
@@ -15,6 +15,7 @@
 - Email: lucien@hudsontetondev.com
 - Website: https://hudsontetondev.com/
 - Instagram: https://www.instagram.com/hudsontetondev
+- Facebook: https://www.facebook.com/profile.php?id=61572079917538 (Hudson Development LLC)
 
 ## Background
 Lucien grew up in a family of developers, general contractors, and builders and started in the trades at sixteen. He owned a painting and home improvement company for more than twelve years and spent over three years in roofing project management.
