@@ -1130,6 +1130,43 @@ a.contact-card:hover .contact-value { color: var(--gold-dark); }
   color: var(--gray-deep);
 }
 
+/* Testimonial */
+.testimonial {
+  background: var(--navy);
+  padding: 96px 0;
+  position: relative;
+  overflow: hidden;
+}
+.testimonial::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(60% 90% at 50% 0%, rgba(201,168,76,0.10) 0%, transparent 70%);
+  pointer-events: none;
+}
+.testimonial-quote { position: relative; max-width: 760px; margin: 0 auto; text-align: center; }
+.testimonial-mark {
+  display: block;
+  font-family: var(--display);
+  font-size: 5.5rem; line-height: 0.6;
+  color: var(--gold);
+  margin-bottom: 18px;
+}
+.testimonial-quote blockquote p {
+  font-family: var(--display);
+  font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--bone);
+}
+.testimonial-quote figcaption {
+  margin-top: 28px;
+  font-size: 0.8rem; font-weight: 600;
+  letter-spacing: 0.16em; text-transform: uppercase;
+  color: rgba(244,241,233,0.62);
+}
+.testimonial-name { color: var(--gold); }
+@media (max-width: 600px) { .testimonial { padding: 72px 0; } }
+
 /* Story portrait */
 .story-portrait { margin-top: 36px; max-width: 100%; position: relative; }
 .portrait-badge {
