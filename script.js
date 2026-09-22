@@ -233,7 +233,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     story: {
       label: 'Who is Hudson?',
-      reply: `I grew up in a <strong>family of builders</strong>. My great-grandfather, grandfather, and dad have all been developers, general contractors, and builders. I started at sixteen in my family's construction company, owned a painting and home improvement company for 12+ years, then spent 3+ years in roofing project management. Hudson is a family name, and it carries that history. My mom always told us we're related to Henry Hudson, the explorer. "Goose" is the nickname my grandfather gave me.`,
+      reply: `I grew up in a <strong>family of builders</strong>. My great-grandfather, grandfather, and dad have all been developers, general contractors, and builders. I started in the trades at sixteen working under my dad. Since then I've worked for other contractors, owned a painting and home improvement company for 12+ years, and spent 3+ years in roofing project management. Hudson is a family name, and it carries that history. My mom always told us we're related to Henry Hudson, the explorer. "Goose" is the nickname my grandfather gave me.`,
       next: ['services', 'estimate']
     },
     pricing: {
