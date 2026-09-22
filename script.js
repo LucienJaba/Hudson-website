@@ -238,7 +238,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     story: {
       label: 'Who is Hudson?',
-      reply: `Hudson is a family name. My grandfather was <strong>Guy Hudson Andrews</strong>, a builder, and his father was a developer. I grew up on my stepdad's job sites and have spent 25 years in the trades since. "Goose" is the nickname my grandfather gave me.`,
+      reply: `I grew up in a <strong>family of builders</strong>. Every generation, from my great-grandfather to my dad, worked as a builder, developer, or general contractor, and I've been in the trades since I was sixteen. Hudson is a family name, and it carries that history. "Goose" is the nickname my grandfather gave me.`,
       next: ['services', 'estimate']
     },
     pricing: {
