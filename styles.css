@@ -1080,6 +1080,8 @@ a.contact-card:hover .contact-value { color: var(--gold-dark); }
   color: var(--gold-dark); text-transform: uppercase; margin-bottom: 22px;
 }
 .ba-feature {
+  max-width: 860px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 3fr 2fr;
   gap: 16px;
