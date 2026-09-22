@@ -1143,8 +1143,25 @@ a.contact-card:hover .contact-value { color: var(--gold-dark); }
   background: radial-gradient(60% 90% at 50% 0%, rgba(201,168,76,0.10) 0%, transparent 70%);
   pointer-events: none;
 }
-.testimonial-quote { position: relative; max-width: 660px; margin: 0 auto; text-align: center; }
-.testimonial-quote .section-label { margin-bottom: 18px; }
+.testimonial-label { display: block; text-align: center; margin-bottom: 30px; }
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.testimonial-quote {
+  position: relative; margin: 0;
+  padding: 0 44px;
+  display: flex; flex-direction: column; justify-content: center;
+  text-align: center;
+}
+.testimonial-quote + .testimonial-quote { border-left: 1px solid rgba(201,168,76,0.22); }
+@media (max-width: 760px) {
+  .testimonial-grid { grid-template-columns: 1fr; gap: 36px; }
+  .testimonial-quote { padding: 0; }
+  .testimonial-quote + .testimonial-quote { border-left: 0; border-top: 1px solid rgba(201,168,76,0.22); padding-top: 36px; }
+}
 .testimonial-quote blockquote p {
   font-family: var(--display);
   font-size: clamp(1.02rem, 1.6vw, 1.18rem);
