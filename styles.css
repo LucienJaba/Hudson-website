@@ -1133,7 +1133,7 @@ a.contact-card:hover .contact-value { color: var(--gold-dark); }
 /* Testimonial */
 .testimonial {
   background: var(--navy);
-  padding: 96px 0;
+  padding: 64px 0;
   position: relative;
   overflow: hidden;
 }
@@ -1143,23 +1143,23 @@ a.contact-card:hover .contact-value { color: var(--gold-dark); }
   background: radial-gradient(60% 90% at 50% 0%, rgba(201,168,76,0.10) 0%, transparent 70%);
   pointer-events: none;
 }
-.testimonial-quote { position: relative; max-width: 760px; margin: 0 auto; text-align: center; }
-.testimonial-quote .section-label { margin-bottom: 26px; }
+.testimonial-quote { position: relative; max-width: 660px; margin: 0 auto; text-align: center; }
+.testimonial-quote .section-label { margin-bottom: 18px; }
 .testimonial-quote blockquote p {
   font-family: var(--display);
-  font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+  font-size: clamp(1.02rem, 1.6vw, 1.18rem);
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.6;
   color: var(--bone);
 }
 .testimonial-quote figcaption {
-  margin-top: 28px;
-  font-size: 0.8rem; font-weight: 600;
+  margin-top: 20px;
+  font-size: 0.74rem; font-weight: 600;
   letter-spacing: 0.16em; text-transform: uppercase;
   color: rgba(244,241,233,0.62);
 }
 .testimonial-name { color: var(--gold); }
-@media (max-width: 600px) { .testimonial { padding: 72px 0; } }
+@media (max-width: 600px) { .testimonial { padding: 52px 0; } }
 
 /* Story portrait */
 .story-portrait { margin-top: 36px; max-width: 100%; position: relative; }
