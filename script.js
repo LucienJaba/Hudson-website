@@ -218,7 +218,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     roofing: {
       label: 'Roofing',
-      reply: `Full roof replacements built for heavy snow loads, plus <strong>wind and hail damage repair</strong>. If insurance is involved, we work with your carrier for you. Want me to set up a free estimate?`,
+      reply: `Full roof replacements built for heavy snow loads, plus <strong>wind and hail damage repair</strong>. Want me to set up a free estimate?`,
       next: ['storm', 'estimate', 'area', 'services']
     },
     construction: {
@@ -249,7 +249,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     storm: {
       label: 'Storm repair',
-      reply: `We're <strong>hail and wind damage specialists</strong>. We handle insurance claims end-to-end and can usually get a free roof inspection scheduled within 48 hours. Want me to set one up?`,
+      reply: `We're <strong>hail and wind damage specialists</strong>. We repair roofs and siding after storms and can usually get a free roof inspection scheduled within 48 hours. Want me to set one up?`,
       next: ['estimate', 'roofing', 'services']
     },
     contact: {
@@ -269,7 +269,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let chatStarted = false;
 
   const leadState = { step: 'idle', data: { name: '', contact: '', service: '', time: '' } };
-  const SERVICE_OPTIONS = ['Roofing', 'Storm / Insurance', 'Painting', 'Renovations', 'Carpentry & Decks', 'Other'];
+  const SERVICE_OPTIONS = ['Roofing', 'Storm Restoration', 'Painting', 'Renovations', 'Carpentry & Decks', 'Other'];
   const TIME_OPTIONS = ['Morning', 'Midday', 'Afternoon', 'Evening'];
 
   function appendMessage(text, sender) {
