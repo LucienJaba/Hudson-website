@@ -15,7 +15,7 @@
   --gold-light:  #E2C878;
   --gold-dark:   #A88B35;
   --gray:        #7C8AA1;
-  --gray-deep:   #56627A;
+  --gray-deep:   #414C62;
   --text-dark:   #0B1D3A;
 
   --shadow:    0 4px 30px rgba(11, 29, 58, 0.10);
@@ -34,6 +34,7 @@ html { scroll-behavior: smooth; font-size: 16px; -webkit-text-size-adjust: 100%;
 
 body {
   font-family: var(--body);
+  font-weight: 500;
   color: var(--text-dark);
   background: var(--bone);
   line-height: 1.6;
@@ -328,7 +329,7 @@ h1, h2, h3, h4 {
   margin-bottom: 26px;
   text-transform: uppercase;
 }
-.hero-eyebrow-line { width: 38px; height: 1px; background: var(--gold); opacity: 0.6; }
+.hero-eyebrow-line { width: 38px; height: 1px; background: var(--gold); opacity: 0.6; flex-shrink: 0; }
 
 .hero-title {
   font-size: clamp(3rem, 8vw, 6rem);
