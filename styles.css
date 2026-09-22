@@ -1178,6 +1178,27 @@ a.contact-card:hover .contact-value { color: var(--gold-dark); }
 .testimonial-name { color: var(--gold); }
 @media (max-width: 600px) { .testimonial { padding: 52px 0; } }
 
+/* FAQ */
+.faq { padding: 96px 0; background: var(--bone-deep); }
+.faq .section-head { margin-bottom: 40px; }
+.faq-list { max-width: 760px; margin: 0 auto; }
+.faq-item { border-bottom: 1px solid rgba(11,29,58,0.12); }
+.faq-item summary {
+  list-style: none; cursor: pointer;
+  display: flex; justify-content: space-between; align-items: center; gap: 20px;
+  padding: 20px 0;
+  font-family: var(--display); font-size: 1.15rem; font-weight: 600; color: var(--navy);
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: '+'; flex-shrink: 0;
+  font-family: var(--body); font-size: 1.4rem; font-weight: 500; color: var(--gold-dark);
+  transition: transform 0.3s var(--ease);
+}
+.faq-item[open] summary::after { transform: rotate(45deg); }
+.faq-item p { padding: 0 0 20px; font-size: 1rem; line-height: 1.7; color: var(--gray-deep); max-width: 62ch; }
+@media (max-width: 600px) { .faq { padding: 72px 0; } .faq-item summary { font-size: 1.05rem; } }
+
 /* Story portrait */
 .story-portrait { margin-top: 36px; max-width: 100%; position: relative; }
 .portrait-badge {
