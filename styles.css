@@ -1144,13 +1144,7 @@ a.contact-card:hover .contact-value { color: var(--gold-dark); }
   pointer-events: none;
 }
 .testimonial-quote { position: relative; max-width: 760px; margin: 0 auto; text-align: center; }
-.testimonial-mark {
-  display: block;
-  font-family: var(--display);
-  font-size: 5.5rem; line-height: 0.6;
-  color: var(--gold);
-  margin-bottom: 18px;
-}
+.testimonial-quote .section-label { margin-bottom: 26px; }
 .testimonial-quote blockquote p {
   font-family: var(--display);
   font-size: clamp(1.25rem, 2.2vw, 1.6rem);
