@@ -642,16 +642,21 @@ h1, h2, h3, h4 {
 }
 
 .story-body { padding-top: 10px; }
-.story-lead {
+.story-body p { font-size: 1.06rem; color: var(--gray-deep); line-height: 1.75; margin-bottom: 20px; max-width: 34em; }
+.story-body .story-lead {
   font-family: var(--display);
-  font-size: 1.5rem;
-  line-height: 1.4;
-  color: var(--navy);
+  font-style: italic;
+  font-size: 1.6rem;
+  line-height: 1.35;
+  color: var(--gold-dark);
   font-weight: 400;
-  margin-bottom: 22px;
-  letter-spacing: -0.01em;
+  margin: 26px 0 30px;
+  padding-top: 26px;
+  border-top: 1px solid rgba(11,29,58,0.12);
+  max-width: none;
+  letter-spacing: -0.005em;
 }
-.story-body p { font-size: 1.04rem; color: var(--gray-deep); line-height: 1.8; margin-bottom: 18px; }
+.story-body .btn { margin-top: 14px; }
 .story-body p strong { color: var(--navy); font-weight: 600; }
 .story-sign {
   font-family: var(--display) !important;
@@ -853,7 +858,7 @@ a.contact-card:hover .contact-value { color: var(--gold-dark); }
   .contact-grid { grid-template-columns: 1fr; gap: 36px; }
   .contact-form { padding: 30px; }
   .form-row { grid-template-columns: 1fr; }
-  .story-lead { font-size: 1.3rem; }
+  .story-body .story-lead { font-size: 1.35rem; }
 }
 
 @media (max-width: 480px) {
