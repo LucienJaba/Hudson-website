@@ -1199,6 +1199,10 @@ a.contact-card:hover .contact-value { color: var(--gold-dark); }
 .faq-item p { padding: 0 0 20px; font-size: 1rem; line-height: 1.7; color: var(--gray-deep); max-width: 62ch; }
 @media (max-width: 600px) { .faq { padding: 72px 0; } .faq-item summary { font-size: 1.05rem; } }
 
+.review-cta { margin-top: 40px; display: flex; justify-content: center; align-items: center; gap: 24px; flex-wrap: wrap; }
+.review-link { color: var(--gold); font-weight: 600; font-size: 0.92rem; border-bottom: 1px solid rgba(201,168,76,0.5); padding-bottom: 2px; }
+.review-link:hover { color: var(--gold-light); }
+
 /* Story portrait */
 .story-portrait { margin-top: 36px; max-width: 100%; position: relative; }
 .portrait-badge {
