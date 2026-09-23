@@ -19,3 +19,9 @@
 
 ## Background
 Lucien grew up in a family of developers, general contractors, and builders and started in the trades at sixteen. He owned a painting and home improvement company for more than twelve years and spent over three years in roofing project management.
+
+## Service pages
+- Painting: https://hudsontetondev.com/painting/
+- Staining: https://hudsontetondev.com/staining/
+- Roofing & storm restoration: https://hudsontetondev.com/roofing/
+- Renovations, additions & carpentry: https://hudsontetondev.com/renovations/
